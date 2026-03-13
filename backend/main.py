@@ -9,6 +9,10 @@ calculate risk scores, and generate DPDPA compliance reports.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 # Import our scan routes router from the api module
 from api.scan_routes import router as scan_router
 
@@ -67,3 +71,8 @@ async def get_status():
         "status": "Backend API is running",
         "version": "1.0"
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    # Default port set to 8000
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
