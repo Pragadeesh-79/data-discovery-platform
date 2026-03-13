@@ -38,6 +38,10 @@ app.add_middleware(
 # Include all routes defined in api/scan_routes.py
 app.include_router(scan_router)
 
+# Import and include report routes
+from api.report_routes import router as report_router
+app.include_router(report_router)
+
 # ---------------------------------------------------------
 # API Endpoints
 # ---------------------------------------------------------
