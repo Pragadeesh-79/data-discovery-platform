@@ -1,12 +1,12 @@
 import spacy
+from spacy.cli import download
 
 class NLPDetector:
     def __init__(self):
         try:
             self.nlp = spacy.load("en_core_web_sm")
         except OSError:
-            import spacy.cli
-            spacy.cli.download("en_core_web_sm")
+            download("en_core_web_sm")
             self.nlp = spacy.load("en_core_web_sm")
 
     def detect(self, text: str) -> list:
@@ -17,6 +17,36 @@ class NLPDetector:
             if ent.label_ == "PERSON":
                 results.append({
                     "value": ent.text,
-                    "entity_type": "Name"
+                    "entity_type": "Name",
+                    "classification": "Personal",
+                    "method": "Spacy"
+                })
+            elif ent.label_ == "ORG":
+                results.append({
+                    "value": ent.text,
+                    "entity_type": "Organization",
+                    "classification": "Personal",
+                    "method": "Spacy"
+                })
+            elif ent.label_ == "GPE":
+                results.append({
+                    "value": ent.text,
+                    "entity_type": "Location",
+                    "classification": "Personal",
+                    "method": "Spacy"
+                })
+            elif ent.label_ == "DATE":
+                results.append({
+                    "value": ent.text,
+                    "entity_type": "Date",
+                    "classification": "Sensitive",
+                    "method": "Spacy"
+                })
+            elif ent.label_ == "MONEY":
+                results.append({
+                    "value": ent.text,
+                    "entity_type": "Financial",
+                    "classification": "Highly Sensitive",
+                    "method": "Spacy"
                 })
         return results

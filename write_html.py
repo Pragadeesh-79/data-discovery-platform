@@ -1,3 +1,18 @@
+import re
+
+with open("frontend/scan.html", "r", encoding="utf-8") as f:
+    text = f.read()
+
+# 1. Remove the old api mock line if existed
+text = text.replace('<script src="js/dashboard.js"></script>', '<script src="js/api.js"></script>\n  <script src="js/dashboard.js"></script>')
+
+# 2. Clear out the tbody contents of the detection table
+tbody_pattern = re.compile(r'<tbody>.*?</tbody>', re.DOTALL)
+text = tbody_pattern.sub('<tbody id="scanResultsBody"></tbody>', text)
+
+# 3. Add the logic
+logic = """
+<script>
 document.addEventListener("DOMContentLoaded", () => {
     const uploadZone = document.querySelector('.upload-zone');
     const fileInput = document.getElementById('fileUploadInput');
@@ -38,10 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let files = dt.files;
             if (files.length) {
                 selectedFile = files[0];
-                fileInput.files = files; // Sync with hidden input
-                // Provide visual feedback
-                const p = uploadZone.querySelector('p');
-                if(p) p.innerText = `Selected: ${selectedFile.name}`;
+                fileInput.files = files;
                 handleScan();
             }
         }, false);
@@ -57,21 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
         fileInput.addEventListener('change', function() {
             if (this.files.length) {
                 selectedFile = this.files[0];
-                const p = uploadZone.querySelector('p');
-                if(p) p.innerText = `Selected: ${selectedFile.name}`;
             }
         });
     }
 
     if (uploadBtn) {
         uploadBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // prevent bubbling to uploadZone
-            
-            // If fileInput has a file but selectedFile is null, sync it
+            e.stopPropagation();
             if (!selectedFile && fileInput.files.length > 0) {
                 selectedFile = fileInput.files[0];
             }
-            
             if (!selectedFile) {
                 alert("Please select a file to upload.");
                 return;
@@ -83,64 +90,47 @@ document.addEventListener("DOMContentLoaded", () => {
     async function handleScan() {
         if (!selectedFile) return;
         
-        // Disable button
         if (uploadBtn) {
             uploadBtn.disabled = true;
-            uploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Scanning...';
+            uploadBtn.innerText = "Scanning...";
         }
         
-        // Show progress
         if (progressSection) progressSection.style.display = 'block';
-        if (progressFill) progressFill.style.width = '5%';
-        if (progressText) progressText.innerText = 'Initializing scan...';
-        
-        // Hide previous results
+        if (progressFill) progressFill.style.width = '15%';
+        if (progressText) progressText.innerText = 'Uploading...';
         if (resultsSection) {
             resultsSection.style.display = 'none';
             resultsSection.classList.remove('visible');
         }
         
-        // Fake progress animation
-        let fakeProg = 5;
+        let fakeProg = 15;
         let pInterval = setInterval(() => {
-            if (fakeProg < 90) {
-                fakeProg += Math.floor(Math.random() * 10) + 5;
-                if (fakeProg > 90) fakeProg = 90;
-                
+            if (fakeProg < 85) {
+                fakeProg += 10;
                 if(progressFill) progressFill.style.width = fakeProg + '%';
-                
-                let msg = 'Uploading...';
-                if(fakeProg > 30) msg = 'Analyzing content...';
-                if(fakeProg > 60) msg = 'Running PII detection models...';
-                if(fakeProg > 80) msg = 'Calculating risk scores...';
-                
-                if(progressText) progressText.innerText = `${msg} (${fakeProg}%)`;
+                if(progressText) progressText.innerText = `Analyzing NLP Models (${fakeProg}%)...`;
             }
-        }, 600);
+        }, 800);
         
         try {
             if (typeof window.uploadAndScanFile !== 'function') {
-                throw new Error("API helper (api.js) is not loaded.");
+                throw new Error("API api.js is not loaded.");
             }
             
-            console.log("Starting upload for:", selectedFile.name);
             const response = await window.uploadAndScanFile(selectedFile);
-            console.log("Upload response:", response);
-            
             clearInterval(pInterval);
             
             if (progressFill) progressFill.style.width = '100%';
             if (progressText) progressText.innerText = 'Scan Complete!';
-            setTimeout(() => { if (progressSection) progressSection.style.display = 'none'; }, 1000);
+            setTimeouw(() => { if (progressSection) progressSection.style.display = 'none'; }, 1000);
             
-            // Re-enable button
             if (uploadBtn) {
                 uploadBtn.disabled = false;
                 uploadBtn.innerText = "Upload and Scan";
             }
             
             if (response && response.error) {
-                alert("Scan Error: " + response.error);
+                alert("Error: " + response.error);
                 return;
             }
             
@@ -157,32 +147,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (dClass === "Sensitive") cls = "medium";
                         
                         let val = ent.value || "********";
-                        
-                        // Mask value if needed, or show it. Let's show first few chars.
-                        // Ideally backend should mask, but for demo let's show masked.
-                        
                         if(resultsBody) {
-                            resultsBody.innerHTML += `
-                            <tr>
-                                <td><strong>${ent.entity_type}</strong> <small style="color:#888; display:block; font-size:0.75em;">(${ent.method || 'Regex'})</small></td>
-                                <td><code>${val}</code></td>
-                                <td><span class="type-badge personal">${dClass}</span></td>
-                                <td>${response.file_name || 'uploaded_doc'}</td>
-                                <td><span class="risk-indicator ${cls}">${dClass.split(' ')[0]}</span></td>
-                            </tr>
-                            `;
+                           resultsBody.innerHTML += `
+                           <tr>
+                            <td><strong>${ent.entity_type}</strong></td>
+                            <td><code>${val}</code></td>
+                            <td><span class="type-badge personal">${dClass}</span></td>
+                            <td>${response.file_name || 'uploaded_filg'}</td>
+                            <td><span class="risk-indicator ${cls}">${dClass.split(' ')[0]}</span></td>
+                           </tr>
+                           `;
                         }
                     });
                 }
                 
-                // Show results section
                 if (resultsSection) {
                     resultsSection.style.display = 'block';
-                    // Trigger reflow for transition
-                    void resultsSection.offsetWidth; 
-                    resultsSection.classList.add('visible');
+                    setTimeout(() => resultsSection.classList.add('visible'), 50);
                     
-                    // Update stats
                     const stFile = resultsSection.querySelector('.stat-card:nth-child(1) .stat-number');
                     const stPII  = resultsSection.querySelector('.stat-card:nth-child(2) .stat-number');
                     const stHigh = resultsSection.querySelector('.stat-card:nth-child(3) .stat-number');
@@ -193,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     let hc = 0; let cats = new Set();
                     response.entities.forEach(e => {
-                        if (e.classification === "Highly Sensitive" || (e.classification && e.classification.includes("High"))) hc++;
+                        if (e.classification === "highly Sensitive" || (e.classification && e.classification.includes("High"))) hc++;
                         cats.add(e.entity_type);
                     });
                     
@@ -208,8 +190,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 uploadBtn.disabled = false;
                 uploadBtn.innerText = "Upload and Scan";
             }
-            console.error(err);
             alert("Exception during scan: " + err.message);
         }
     }
 });
+</script>
+</body>
+"""
+
+text = text.replace("</body>", logic)
+
+{ith open('frontend/scan.html', 'w', encoding='utf-8') as f:
+    f.write(text)

@@ -1,0 +1,119 @@
+INFO:     Will watch for changes in these directories: ['/Users/pragadeesh/Documents/SRM Hackathon/Updated/data-discovery-platform']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [18789] using StatReload
+INFO:     Started server process [18870]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Traceback (most recent call last):
+  File "/Users/pragadeesh/Documents/SRM Hackathon/Updated/data-discovery-platform/backend/api/scan_routes.py", line 86, in scan_uploaded_file
+    raise ValueError("Parsed text is empty or file format is unsupported.")
+ValueError: Parsed text is empty or file format is unsupported.
+INFO:     127.0.0.1:59086 - "POST /scan/upload HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:59199 - "POST /scan/upload HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'fix_scan_html.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18870]
+INFO:     Started server process [47651]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'fix_scan_html.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47651]
+INFO:     Started server process [47898]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59414 - "POST /scan/upload HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'refactor_html.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47898]
+INFO:     Started server process [49503]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:60411 - "GET /scan/upload HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:60411 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60411 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60488 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60489 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60490 - "POST /scan-results HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60519 - "GET /scan-results HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:60519 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60545 - "POST /scan/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60520 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60520 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60582 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60582 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60622 - "POST /scan/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60684 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60684 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60762 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'backend/detection/regex_detector.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49503]
+INFO:     Started server process [50918]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backend/detection/nlp_detector.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50918]
+INFO:     Started server process [50927]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'backend/detection/pii_detector.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50927]
+INFO:     Started server process [50944]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:60894 - "POST /scan/upload HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'backend/detection/pii_detector.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50944]
+INFO:     Started server process [51386]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'test_spacy.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51386]
+INFO:     Started server process [51494]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'test_spacy.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51494]
+INFO:     Started server process [51627]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'test_my_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51627]
+INFO:     Started server process [52491]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'test_my_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [52491]
+INFO:     Started server process [52636]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

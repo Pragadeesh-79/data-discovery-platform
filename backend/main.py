@@ -9,6 +9,10 @@ calculate risk scores, and generate DPDPA compliance reports.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 # Import our scan routes router from the api module
 from api.scan_routes import router as scan_router
 
@@ -23,9 +27,11 @@ app = FastAPI(
 # Configure CORS (Cross-Origin Resource Sharing)
 # This is required so our frontend (running on a different port/domain) can talk to this backend API.
 # Using ["*"] allows all origins, which is good for local development and hackathons.
+origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
     allow_headers=["*"],  # Allow all headers

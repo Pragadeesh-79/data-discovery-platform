@@ -135,43 +135,7 @@
                 <th>Risk</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td><strong>Aadhaar</strong></td>
-                <td><code>XXXX-XXXX-4521</code></td>
-                <td><span class="type-badge identifier">Identifier</span></td>
-                <td>employees.xlsx</td>
-                <td><span class="risk-indicator high">High</span></td>
-              </tr>
-              <tr>
-                <td><strong>PAN</strong></td>
-                <td><code>BNZPX****M</code></td>
-                <td><span class="type-badge financial">Financial</span></td>
-                <td>payroll.csv</td>
-                <td><span class="risk-indicator high">High</span></td>
-              </tr>
-              <tr>
-                <td><strong>Email</strong></td>
-                <td><code>p***@corp.in</code></td>
-                <td><span class="type-badge contact">Contact</span></td>
-                <td>contacts.csv</td>
-                <td><span class="risk-indicator medium">Medium</span></td>
-              </tr>
-              <tr>
-                <td><strong>Person</strong></td>
-                <td><code>Arun K***</code></td>
-                <td><span class="type-badge personal">Personal</span></td>
-                <td>report.pdf</td>
-                <td><span class="risk-indicator low">Low</span></td>
-              </tr>
-              <tr>
-                <td><strong>Location</strong></td>
-                <td><code>Mumbai, MH</code></td>
-                <td><span class="type-badge personal">Personal</span></td>
-                <td>invoice.docx</td>
-                <td><span class="risk-indicator low">Low</span></td>
-              </tr>
-            </tbody>
+            <tbody id="scanResultsBody"></tbody>
           </table>
         </div>
 
@@ -211,6 +175,10 @@
     </div>
   </footer>
 
+  <script src="js/api.js"></script>
   <script src="js/dashboard.js"></script>
+
+<script src="js/scanner.js"></script>
 </body>
+
 </html>

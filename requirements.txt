@@ -3,3 +3,11 @@ uvicorn
 pymongo
 pydantic
 certifi
+cryptography
+spacy
+python-multipart
+pdfminer.six
+pandas
+python-docx
+openpyxl
+

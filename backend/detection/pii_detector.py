@@ -54,22 +54,38 @@ class PIIDetector:
         db_records = []
         timestamp = datetime.utcnow().isoformat(timespec='seconds')
         
+        try:
+            from utils.encryption import encryptor
+        except ImportError:
+            from backend.utils.encryption import encryptor
+        
         for ent in unique_entities:
             entity_type = ent["entity_type"]
-            classification = self.classifier.classify(entity_type)
+            method = ent.get("method", "Unknown")
+            
+            # Use classification if provided by detector, else classify
+            if "classification" in ent:
+                classification = ent["classification"]
+            else:
+                classification = self.classifier.classify(entity_type)
+            
+            # Encrypt sensitive values before storing
+            encrypted_val = encryptor.encrypt(ent["value"])
             
             final_entities.append({
-                "value": ent["value"],
                 "entity_type": entity_type,
-                "classification": classification
+                "value": ent["value"], # Still mask on frontend if needed, but include for checking
+                "classification": classification,
+                "method": method
             })
             
             db_records.append({
                 "file_name": file_name,
                 "source": source,
                 "entity_type": entity_type,
-                "value": ent["value"],
+                "encrypted_value": encrypted_val,
                 "classification": classification,
+                "method": method,
                 "timestamp": timestamp
             })
             

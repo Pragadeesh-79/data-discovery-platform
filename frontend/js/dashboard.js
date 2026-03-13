@@ -132,67 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Scanner Page: Drag & Drop ──
-  const uploadZone = document.querySelector('.upload-zone');
-  if (uploadZone) {
-    ['dragenter', 'dragover'].forEach(event => {
-      uploadZone.addEventListener(event, (e) => {
-        e.preventDefault();
-        uploadZone.classList.add('drag-over');
-      });
-    });
-
-    ['dragleave', 'drop'].forEach(event => {
-      uploadZone.addEventListener(event, (e) => {
-        e.preventDefault();
-        uploadZone.classList.remove('drag-over');
-      });
-    });
-
-    uploadZone.addEventListener('drop', (e) => {
-      const files = e.dataTransfer.files;
-      if (files.length > 0) {
-        handleFileUpload(files);
-      }
-    });
-
-    uploadZone.addEventListener('click', () => {
-      const input = document.createElement('input');
-      input.type = 'file';
-      input.multiple = true;
-      input.accept = '.pdf,.csv,.xlsx,.xls,.docx';
-      input.onchange = () => handleFileUpload(input.files);
-      input.click();
-    });
-  }
-
-  function handleFileUpload(files) {
-    const progressSection = document.querySelector('.scan-progress');
-    const progressFill = document.querySelector('.progress-bar-fill');
-    const progressText = document.querySelector('.progress-text');
-    const resultsSection = document.querySelector('.scan-results');
-
-    if (progressSection) {
-      progressSection.style.display = 'block';
-
-      let progress = 0;
-      const interval = setInterval(() => {
-        progress += Math.random() * 15;
-        if (progress >= 100) {
-          progress = 100;
-          clearInterval(interval);
-          if (progressText) progressText.textContent = `Scan complete — ${files.length} file(s) processed`;
-          if (resultsSection) {
-            resultsSection.style.display = 'block';
-            resultsSection.classList.add('visible');
-          }
-        } else {
-          if (progressText) progressText.textContent = `Scanning... ${Math.floor(progress)}%`;
-        }
-        if (progressFill) progressFill.style.width = `${progress}%`;
-      }, 200);
-    }
-  }
+  // ── Scanner Page: Drag & Drop (Mock Removed) ──
+  // Real integration is handled in scan.html via api.js
 
   // ── Typing Animation for Code Blocks ──
   const codeBlocks = document.querySelectorAll('.code-block');

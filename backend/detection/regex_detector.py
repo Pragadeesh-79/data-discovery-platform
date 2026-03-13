@@ -10,6 +10,7 @@ class RegexDetector:
             for match in pattern.finditer(text):
                 results.append({
                     "value": match.group(),
-                    "entity_type": entity_type
+                    "entity_type": entity_type,
+                    "method": "Regex"
                 })
         return results

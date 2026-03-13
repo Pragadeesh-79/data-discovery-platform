@@ -26,14 +26,15 @@ client = MongoClient(
     tlsCAFile=certifi.where()
 )
 
-# 3. Access the specific database named 'data_discovery_platform'
-db = client["data_discovery_platform"]
+# 3. Access the specific database named 'data_discovery'
+db = client["data_discovery"]
 
 def get_db():
     return db
 
-# 4. Get a reference to the 'test_collection'
-test_collection = db["test_collection"]
+# 4. References to the required collections
+pii_inventory = db["pii_inventory"]
+sample_data_sources = db["sample_data_sources"]
 
 def check_db_connection():
     """
