@@ -11,7 +11,7 @@ import pymongo.errors
 router = APIRouter()
 
 @router.post("/scan-results")
-async def save_scan_result(record: PIIRecord):
+def save_scan_result(record: PIIRecord):
     """
     Endpoint to receive a single PII scan result and save it into MongoDB Atlas.
     
@@ -39,11 +39,16 @@ async def save_scan_result(record: PIIRecord):
             "message": "PII record stored successfully"
         }
         
-    except pymongo.errors.ServerSelectionTimeoutError:
+    except pymongo.errors.ServerSelectionTimeoutError as e:
         # Handle specific connection timeout error during insertion
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="MongoDB Atlas cluster timed out while connecting"
+            detail=f"MongoDB Atlas cluster timed out while connecting: {str(e)}"
+        )
+    except pymongo.errors.PyMongoError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"MongoDB error: {str(e)}"
         )
     except Exception as e:
         # Catch any other unexpected errors
