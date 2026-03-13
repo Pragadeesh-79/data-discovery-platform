@@ -11,10 +11,9 @@ class PIIDetector:
         self.nlp_detector = NLPDetector()
         self.classifier = PIIClassifier()
 
-        self.mongo_uri = "mongodb+srv://data-discovery-platform:Pragadeesh79@cluster0.9jrovtp.mongodb.net/?retryWrites=true&w=majority"
+        self.mongo_uri = "mongodb+srv://data-discovery-platform:Pragadeesh79@cluster0.9jrovtp.mongodb.net/"
         try:
-            import certifi
-            self.client = pymongo.MongoClient(self.mongo_uri, serverSelectionTimeoutMS=5000, tlsCAFile=certifi.where())
+            self.client = pymongo.MongoClient(self.mongo_uri, serverSelectionTimeoutMS=5000)
             self.db = self.client["data_discovery"]
             self.collection = self.db["pii_inventory"]
         except Exception as e:
