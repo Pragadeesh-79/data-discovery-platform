@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DataShield Enterprises — Data inventory, classification breakdown, and department-level personal data overview.">
-  <title>Enterprises — DataShield</title>
+  <meta name="description" content="Cipher Enterprises — Data inventory, classification breakdown, and department-level personal data overview.">
+  <title>Enterprises — Cipher</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@
     <div class="container">
       <a href="index.html" class="navbar-logo">
         <div class="logo-icon"><i class="fas fa-shield-halved"></i></div>
-        DataShield
+        Cipher
       </a>
       <div class="navbar-links" id="navLinks">
         <a href="index.html">Dashboard</a>
@@ -34,197 +34,249 @@
   <!-- ═══ ENTERPRISE PAGE ═══ -->
   <section class="scanner-page">
     <div class="container">
-      <div class="section-header" style="margin-bottom:40px;">
-        <span class="section-label">Enterprise View</span>
-        <h2>Data Inventory <span class="gradient-text">Across Departments</span></h2>
-        <p class="section-subtitle">Complete visibility into personal data discovered across your enterprise — classified by department, data type, and risk level.</p>
-      </div>
-
-      <!-- Enterprise Stats -->
-      <div class="stats-row reveal">
-        <div class="stat-card">
-          <div class="stat-icon">🏢</div>
-          <div class="stat-number" data-count="5">0</div>
-          <div class="stat-title">Departments</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">📁</div>
-          <div class="stat-number" data-count="2427">0</div>
-          <div class="stat-title">Total Records</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">🔐</div>
-          <div class="stat-number" data-count="37">0</div>
-          <div class="stat-title">High Sensitivity</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">📊</div>
-          <div class="stat-number" data-count="6">0</div>
-          <div class="stat-title">Data Categories</div>
-        </div>
-      </div>
-
-      <!-- Department Cards -->
-      <div class="reveal" style="margin-top:20px;">
-        <h3 style="margin-bottom:24px;display:flex;align-items:center;gap:12px;">
-          <i class="fas fa-building" style="color:var(--accent-blue)"></i>
-          Department Data Map
-        </h3>
-
-        <div class="features-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="feature-card">
-            <div class="feature-icon" style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.2);">👥</div>
-            <h3>Human Resources</h3>
-            <p>Employee records, payroll data, identity documents, and benefits information.</p>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="type-badge identifier">Aadhaar × 85</span>
-              <span class="type-badge financial">PAN × 92</span>
-              <span class="type-badge contact">Phone × 340</span>
-              <span class="type-badge personal">Names × 325</span>
-            </div>
-            <div style="margin-top:12px;">
-              <span class="risk-indicator high">High Risk — 842 records</span>
-            </div>
+      <!-- Enterprise Dataset Dashboard UI -->
+      <div class="coinbase-dashboard reveal">
+        <div class="cb-header">
+          <div class="cb-header-left">
+            <h2>Explore Enterprise Data</h2>
+            <p>In the past 24 hours discovered PII is up <span class="cb-green-text">↗ 3.38%</span></p>
           </div>
-
-          <div class="feature-card">
-            <div class="feature-icon" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2);">💰</div>
-            <h3>Finance</h3>
-            <p>Financial records, tax documents, vendor information, and billing data.</p>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="type-badge financial">PAN × 68</span>
-              <span class="type-badge identifier">Aadhaar × 42</span>
-              <span class="type-badge contact">Email × 210</span>
-              <span class="type-badge personal">Names × 304</span>
-            </div>
-            <div style="margin-top:12px;">
-              <span class="risk-indicator high">High Risk — 624 records</span>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon" style="background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.2);">📢</div>
-            <h3>Marketing</h3>
-            <p>Customer contacts, lead databases, campaign targeting, and CRM data.</p>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="type-badge contact">Email × 280</span>
-              <span class="type-badge contact">Phone × 120</span>
-              <span class="type-badge personal">Names × 56</span>
-            </div>
-            <div style="margin-top:12px;">
-              <span class="risk-indicator medium">Medium Risk — 456 records</span>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.2);">⚖️</div>
-            <h3>Legal</h3>
-            <p>Contracts, agreements, compliance documents, and litigation records.</p>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="type-badge personal">Names × 180</span>
-              <span class="type-badge personal">Locations × 78</span>
-              <span class="type-badge identifier">Aadhaar × 25</span>
-              <span class="type-badge contact">Email × 35</span>
-            </div>
-            <div style="margin-top:12px;">
-              <span class="risk-indicator medium">Medium Risk — 318 records</span>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2);">⚙️</div>
-            <h3>Operations</h3>
-            <p>Logistics data, vendor contacts, shipping records, and facility information.</p>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="type-badge contact">Phone × 85</span>
-              <span class="type-badge contact">Email × 52</span>
-              <span class="type-badge personal">Locations × 50</span>
-            </div>
-            <div style="margin-top:12px;">
-              <span class="risk-indicator low">Low Risk — 187 records</span>
-            </div>
-          </div>
-
-          <div class="feature-card" style="border:2px dashed var(--border-glass);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-            <div class="feature-icon" style="background:var(--bg-glass);">➕</div>
-            <h3>Add Department</h3>
-            <p>Connect additional data sources and departments to expand your inventory.</p>
-            <button class="btn btn-secondary btn-sm" style="margin-top:16px;">Configure Source</button>
+          <div class="cb-search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for a data asset">
           </div>
         </div>
-      </div>
 
-      <!-- Data Classification Breakdown -->
-      <div class="reveal" style="margin-top:48px;">
-        <h3 style="margin-bottom:20px;display:flex;align-items:center;gap:12px;">
-          <i class="fas fa-tags" style="color:var(--accent-cyan)"></i>
-          Classification Breakdown
-        </h3>
+        <div class="cb-top-cards">
+          <!-- Card 1: Banking -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-university"></i> Banking</span>
+              <a href="#">More &gt;</a>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#2563eb;color:#fff;"><i class="fas fa-money-check-alt"></i></div>
+                <div class="cb-item-info">
+                  <h4>Core Banking DB</h4>
+                  <p>Added Jun 22</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">84% Risk</div>
+                <div class="cb-item-trend cb-trend-up">↗ 23.94%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#eab308;color:#000;"><i class="fas fa-credit-card"></i></div>
+                <div class="cb-item-info">
+                  <h4>Card Processor</h4>
+                  <p>Added Jun 27</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">91% Risk</div>
+                <div class="cb-item-trend cb-trend-up">↗ 21.50%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#f97316;color:#fff;"><i class="fas fa-file-invoice-dollar"></i></div>
+                <div class="cb-item-info">
+                  <h4>Loan Origination</h4>
+                  <p>Added Jun 22</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">76% Risk</div>
+                <div class="cb-item-trend cb-trend-up">↗ 21.96%</div>
+              </div>
+            </div>
+          </div>
 
-        <div class="tech-grid">
-          <div class="tech-card">
-            <div class="tech-card-icon" style="background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.2);">🆔</div>
-            <div>
-              <h4>Identifiers</h4>
-              <p>Aadhaar numbers, PAN cards, passport numbers — unique government-issued identifiers. <strong style="color:var(--accent-blue);">152 records</strong></p>
+          <!-- Card 2: Health care -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-heartbeat"></i> Health care</span>
+              <a href="#">More &gt;</a>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#ef4444;color:#fff;"><i class="fas fa-notes-medical"></i></div>
+                <div class="cb-item-info">
+                  <h4>EHR System</h4>
+                  <p>Discovered PII</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">9,420 Recs</div>
+                <div class="cb-item-trend cb-trend-up">↗ 14.40%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#8b5cf6;color:#fff;"><i class="fas fa-x-ray"></i></div>
+                <div class="cb-item-info">
+                  <h4>Imaging Arch</h4>
+                  <p>Discovered PII</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">1,205 Recs</div>
+                <div class="cb-item-trend cb-trend-up">↗ 18.54%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#06b6d4;color:#fff;"><i class="fas fa-pills"></i></div>
+                <div class="cb-item-info">
+                  <h4>Pharmacy DB</h4>
+                  <p>Discovered PII</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">3,110 Recs</div>
+                <div class="cb-item-trend cb-trend-up">↗ 60.05%</div>
+              </div>
             </div>
           </div>
-          <div class="tech-card">
-            <div class="tech-card-icon" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.2);">👤</div>
-            <div>
-              <h4>Personal</h4>
-              <p>Names, addresses, dates of birth, locations — personally identifiable information. <strong style="color:var(--accent-purple);">943 records</strong></p>
+
+          <!-- Card 3: Education -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-graduation-cap"></i> Education</span>
+              <a href="#">More &gt;</a>
             </div>
-          </div>
-          <div class="tech-card">
-            <div class="tech-card-icon" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2);">💳</div>
-            <div>
-              <h4>Financial</h4>
-              <p>Bank accounts, tax IDs, salary data, financial statements — monetary information. <strong style="color:var(--accent-orange);">160 records</strong></p>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#10b981;color:#fff;"><i class="fas fa-user-graduate"></i></div>
+                <div class="cb-item-info">
+                  <h4>Student Info Sys</h4>
+                  <p>Sensitive Data</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">High Risk</div>
+                <div class="cb-item-trend cb-trend-down">↘ 2.40%</div>
+              </div>
             </div>
-          </div>
-          <div class="tech-card">
-            <div class="tech-card-icon" style="background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.2);">📧</div>
-            <div>
-              <h4>Contact</h4>
-              <p>Phone numbers, email addresses, mailing addresses — communication channels. <strong style="color:var(--accent-cyan);">1,172 records</strong></p>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#ec4899;color:#fff;"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="cb-item-info">
+                  <h4>Faculty Portal</h4>
+                  <p>Sensitive Data</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">Med Risk</div>
+                <div class="cb-item-trend cb-trend-up">↗ 5.12%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#64748b;color:#fff;"><i class="fas fa-book"></i></div>
+                <div class="cb-item-info">
+                  <h4>Library Records</h4>
+                  <p>Sensitive Data</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">Low Risk</div>
+                <div class="cb-item-trend cb-trend-down">↘ 0.05%</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Data Flow Diagram -->
-      <div class="reveal" style="margin-top:48px;">
-        <h3 style="margin-bottom:20px;display:flex;align-items:center;gap:12px;">
-          <i class="fas fa-project-diagram" style="color:var(--accent-green)"></i>
-          System Architecture Flow
-        </h3>
-
-        <div class="ai-input-box" style="text-align:center;">
-          <div class="code-block" style="text-align:left;font-size:0.8rem;line-height:2;">
-            <span class="code-comment">// DataShield Processing Pipeline</span><br><br>
-            <span class="code-string">📁 Sample Files</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;▼<br>
-            <span class="code-keyword">🔍 Scanner Engine</span> <span class="code-comment">— Gireesh</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;▼<br>
-            <span class="code-keyword">🛡️ PII Detection</span> <span class="code-comment">— Regex + NLP</span><br>
-            <span class="code-label">&nbsp;&nbsp;├── Aadhaar, PAN, Phone, Email</span><br>
-            <span class="code-label">&nbsp;&nbsp;└── Names, Locations, Orgs (spaCy)</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;▼<br>
-            <span class="code-keyword">⚡ Backend APIs</span> <span class="code-comment">— Rishikumar</span><br>
-            <span class="code-label">&nbsp;&nbsp;├── /scan-results</span><br>
-            <span class="code-label">&nbsp;&nbsp;├── /inventory</span><br>
-            <span class="code-label">&nbsp;&nbsp;└── /report</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;▼<br>
-            <span class="code-keyword">🗄️ MongoDB Inventory</span> <span class="code-comment">— Rishikumar</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;▼<br>
-            <span class="code-keyword">📊 Dashboard & Reports</span> <span class="code-comment">— Manikandan</span>
+        <!-- Main Data Table -->
+        <div class="cb-main-panel">
+          <div class="cb-panel-header">
+            <div class="cb-panel-title">
+              Data Sources <span class="cb-panel-subtitle">11,754 assets</span>
+            </div>
+            <div class="cb-filters">
+              <div class="cb-tabs">
+                <button class="cb-tab active"><i class="fas fa-globe"></i> All assets</button>
+                <button class="cb-tab">Banking</button>
+                <button class="cb-tab">Health</button>
+                <button class="cb-tab">Edu</button>
+              </div>
+              <div class="cb-filter-dropdown" style="margin-left:16px;">USD <i class="fas fa-chevron-down"></i></div>
+              <div class="cb-filter-dropdown">1 Day <i class="fas fa-chevron-down"></i></div>
+            </div>
           </div>
+
+          <table class="cb-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>PII Count</th>
+                <th>Chart</th>
+                <th>Change</th>
+                <th>Risk Score</th>
+                <th>Sector</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#f59e0b;color:#fff;"><i class="fas fa-database"></i></div>
+                  <div class="cb-name-text">
+                    <strong>Core Banking DB</strong>
+                    <span>CDB</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">63,289.06</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="up" d="M0 24 L20 12 L40 16 L60 4 L80 0"></path></svg>
+                </td>
+                <td class="cb-trend-up">↗ 0.46%</td>
+                <td class="cb-col-stat"><span style="color:#ef4444;">94 High</span></td>
+                <td class="cb-col-stat">Banking</td>
+                <td><button class="cb-action-btn">View</button></td>
+              </tr>
+              <tr>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#6366f1;color:#fff;"><i class="fas fa-notes-medical"></i></div>
+                  <div class="cb-name-text">
+                    <strong>EHR System</strong>
+                    <span>EHR</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">3,408.56</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="up" d="M0 20 L20 18 L40 10 L60 8 L80 4"></path></svg>
+                </td>
+                <td class="cb-trend-up">↗ 1.58%</td>
+                <td class="cb-col-stat"><span style="color:#ef4444;">91 High</span></td>
+                <td class="cb-col-stat">Health care</td>
+                <td><button class="cb-action-btn">View</button></td>
+              </tr>
+              <tr>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#10b981;color:#fff;"><i class="fas fa-user-graduate"></i></div>
+                  <div class="cb-name-text">
+                    <strong>Student Info Sys</strong>
+                    <span>SIS</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">1,024.10</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="down" d="M0 4 L20 8 L40 6 L60 16 L80 20"></path></svg>
+                </td>
+                <td class="cb-trend-down">↘ 0.02%</td>
+                <td class="cb-col-stat"><span style="color:#f59e0b;">56 Med</span></td>
+                <td class="cb-col-stat">Education</td>
+                <td><button class="cb-action-btn">View</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -235,7 +287,7 @@
   <footer class="footer" style="margin-top:80px;">
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
-        <span>&copy; 2026 DataShield. DPDPA-Aligned Personal Data Discovery Platform.</span>
+        <span>&copy; 2026 Cipher. DPDPA-Aligned Personal Data Discovery Platform.</span>
         <div class="footer-socials">
           <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
