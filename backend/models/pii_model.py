@@ -2,7 +2,9 @@
 Pydantic data models for the application.
 """
 
-from pydantic import BaseModel
+from typing import Literal
+from datetime import datetime
+from pydantic import BaseModel, Field
 
 class PIIRecord(BaseModel):
     """
@@ -17,5 +19,7 @@ class PIIRecord(BaseModel):
     location: str      # Where it was found (e.g., 'finance/data.xlsx' or a DB table)
     source: str        # The source medium (e.g., 'local_folder', 'email', 'database')
     owner: str         # The owner or department (e.g., 'Finance', 'HR')
-    sensitivity: str   # The sensitivity level (e.g., 'High', 'Medium', 'Low')
+    sensitivity: Literal["Low", "Medium", "High"]   # The sensitivity level (must be exact match)
     risk_score: int    # Calculated numeric risk score based on the data type
+    detected_at: datetime = Field(default_factory=datetime.utcnow) # Automatically set when data was discovered
+
