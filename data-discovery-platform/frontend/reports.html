@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DataShield DPDPA Compliance Reports — Risk assessment, audit trails, and compliance status for personal data protection.">
+  <title>DPDPA Compliance & Reports — DataShield</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon"><i class="fas fa-shield-halved"></i></div>
+        DataShield
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html">Dashboard</a>
+        <a href="lineage.html">Enterprises</a>
+        <a href="reports.html" class="active">DPDPA Compliance</a>
+        <a href="scan.html">Scanner</a>
+        <a href="reports.html">Report</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="scan.html" class="btn btn-primary btn-sm">Get Started <i class="fas fa-arrow-right"></i></a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ REPORTS PAGE ═══ -->
+  <section class="scanner-page">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:40px;">
+        <span class="section-label">Compliance Center</span>
+        <h2>DPDPA <span class="gradient-text">Compliance Reports</span></h2>
+        <p class="section-subtitle">Monitor your organization's compliance status with India's Digital Personal Data Protection Act. Generate audit-ready reports.</p>
+      </div>
+
+      <!-- Compliance Score -->
+      <div class="stats-row reveal">
+        <div class="stat-card">
+          <div class="stat-icon">🛡️</div>
+          <div class="stat-number" data-count="78" style="color:var(--accent-orange);">0</div>
+          <div class="stat-title">Compliance Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-number" data-count="12" style="color:var(--accent-green);">0</div>
+          <div class="stat-title">Checks Passed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚠️</div>
+          <div class="stat-number" data-count="4" style="color:var(--accent-orange);">0</div>
+          <div class="stat-title">Warnings</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">❌</div>
+          <div class="stat-number" data-count="2" style="color:var(--accent-red);">0</div>
+          <div class="stat-title">Failures</div>
+        </div>
+      </div>
+
+      <!-- Compliance Checklist -->
+      <div class="reveal" style="margin-top:20px;">
+        <h3 style="margin-bottom:24px;display:flex;align-items:center;gap:12px;">
+          <i class="fas fa-clipboard-check" style="color:var(--accent-blue)"></i>
+          DPDPA Compliance Checklist
+        </h3>
+
+        <div class="compliance-grid">
+          <div class="compliance-card">
+            <h4><span class="check-icon">✅</span> Data Principal Rights</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Right to access, correct, and erase personal data is implemented.</p>
+            <span class="compliance-status pass">Passed</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">✅</span> Data Inventory</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Complete inventory of personal data with classification and risk scoring.</p>
+            <span class="compliance-status pass">Passed</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">✅</span> Purpose Limitation</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Personal data usage tracked against stated collection purposes.</p>
+            <span class="compliance-status pass">Passed</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">⚠️</span> Consent Management</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Consent records partially implemented. 3 departments pending verification.</p>
+            <span class="compliance-status warning">Warning</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">⚠️</span> Data Retention Policy</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Retention periods defined but automated deletion not yet enforced.</p>
+            <span class="compliance-status warning">Warning</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">✅</span> Breach Notification</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Automated breach detection and notification system configured.</p>
+            <span class="compliance-status pass">Passed</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">❌</span> Cross-Border Transfer</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Cross-border data transfer safeguards not configured for 2 data flows.</p>
+            <span class="compliance-status fail">Failed</span>
+          </div>
+
+          <div class="compliance-card">
+            <h4><span class="check-icon">✅</span> Data Protection Officer</h4>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">DPO appointed and registered with the Data Protection Board.</p>
+            <span class="compliance-status pass">Passed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Summary Table -->
+      <div class="reveal" style="margin-top:48px;">
+        <h3 style="margin-bottom:20px;display:flex;align-items:center;gap:12px;">
+          <i class="fas fa-chart-pie" style="color:var(--accent-purple)"></i>
+          Risk Summary by Department
+        </h3>
+
+        <div class="detection-showcase">
+          <div class="detection-header">
+            <h4>Department Risk Assessment</h4>
+            <button class="btn btn-secondary btn-sm"><i class="fas fa-file-export"></i> Export Report</button>
+          </div>
+          <table class="detection-table">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>PII Records</th>
+                <th>High Risk</th>
+                <th>Medium Risk</th>
+                <th>Low Risk</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Human Resources</strong></td>
+                <td>842</td>
+                <td><span style="color:var(--accent-red);font-weight:700;">18</span></td>
+                <td><span style="color:var(--accent-orange);font-weight:700;">45</span></td>
+                <td><span style="color:var(--accent-green);font-weight:700;">779</span></td>
+                <td><span class="risk-indicator high">High</span></td>
+              </tr>
+              <tr>
+                <td><strong>Finance</strong></td>
+                <td>624</td>
+                <td><span style="color:var(--accent-red);font-weight:700;">12</span></td>
+                <td><span style="color:var(--accent-orange);font-weight:700;">38</span></td>
+                <td><span style="color:var(--accent-green);font-weight:700;">574</span></td>
+                <td><span class="risk-indicator high">High</span></td>
+              </tr>
+              <tr>
+                <td><strong>Marketing</strong></td>
+                <td>456</td>
+                <td><span style="color:var(--accent-red);font-weight:700;">2</span></td>
+                <td><span style="color:var(--accent-orange);font-weight:700;">89</span></td>
+                <td><span style="color:var(--accent-green);font-weight:700;">365</span></td>
+                <td><span class="risk-indicator medium">Medium</span></td>
+              </tr>
+              <tr>
+                <td><strong>Legal</strong></td>
+                <td>318</td>
+                <td><span style="color:var(--accent-red);font-weight:700;">5</span></td>
+                <td><span style="color:var(--accent-orange);font-weight:700;">22</span></td>
+                <td><span style="color:var(--accent-green);font-weight:700;">291</span></td>
+                <td><span class="risk-indicator medium">Medium</span></td>
+              </tr>
+              <tr>
+                <td><strong>Operations</strong></td>
+                <td>187</td>
+                <td><span style="color:var(--accent-red);font-weight:700;">0</span></td>
+                <td><span style="color:var(--accent-orange);font-weight:700;">12</span></td>
+                <td><span style="color:var(--accent-green);font-weight:700;">175</span></td>
+                <td><span class="risk-indicator low">Low</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Export Actions -->
+      <div class="reveal" style="margin-top:48px;">
+        <div class="cta-box">
+          <h3>Generate Full Compliance Report</h3>
+          <p style="color:var(--text-secondary);margin:12px 0 24px;">Download a comprehensive DPDPA-aligned audit report for your organization.</p>
+          <div class="hero-buttons" style="margin-bottom:0;">
+            <button class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF Report</button>
+            <button class="btn btn-secondary btn-lg"><i class="fas fa-file-csv"></i> Export CSV Data</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" style="margin-top:80px;">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2026 DataShield. DPDPA-Aligned Personal Data Discovery Platform.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
