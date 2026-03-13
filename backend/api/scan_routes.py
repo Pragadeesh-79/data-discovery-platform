@@ -10,7 +10,7 @@ from database.mongo_client import test_collection
 router = APIRouter()
 
 @router.post("/scan-results")
-async def save_scan_result(record: PIIRecord):
+def save_scan_result(record: PIIRecord):
     """
     Endpoint to receive a single PII scan result and save it into MongoDB Atlas.
     
