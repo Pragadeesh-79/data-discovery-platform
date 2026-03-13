@@ -28,7 +28,8 @@ async def save_scan_result(record: PIIRecord):
         
     try:
         # 2. Convert the Pydantic model into a standard Python dictionary.
-        record_dict = record.model_dump()
+        # Check for model_dump (Pydantic v2) or fallback to dict (Pydantic v1) for compatibility
+        record_dict = record.model_dump() if hasattr(record, "model_dump") else record.dict()
         
         # 3. Insert the record into the MongoDB database
         test_collection.insert_one(record_dict)

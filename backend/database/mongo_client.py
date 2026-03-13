@@ -5,6 +5,7 @@ This module handles connecting to MongoDB Atlas.
 
 from pymongo import MongoClient
 import urllib.parse
+import certifi
 
 # 1. MongoDB Atlas Connection String
 # URL-encoding the password is required if it contains special characters like @, :, ?, etc.
@@ -12,11 +13,11 @@ username = urllib.parse.quote_plus("data-discovery-platform")
 password = urllib.parse.quote_plus("Pragadeesh79")
 
 # Use the exact cluster URL with the correct parameters
-MONGODB_URI = f"mongodb+srv://{username}:{password}@cluster0.9jrovtp.mongodb.net/?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true"
+MONGODB_URI = f"mongodb+srv://{username}:{password}@cluster0.9jrovtp.mongodb.net/?retryWrites=true&w=majority"
 
 # 2. Create a MongoDB client instance
 # We add serverSelectionTimeoutMS to fail fast if the connection cannot be established
-client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000)
+client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000, tlsAllowInvalidCertificates=True, tlsCAFile=certifi.where())
 
 # 3. Access the specific database named 'data_discovery_platform'
 db = client["data_discovery_platform"]
