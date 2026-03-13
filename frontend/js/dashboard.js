@@ -68,6 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Counter Animation ──
   const counters = document.querySelectorAll('[data-count]');
   if (counters.length > 0) {
+    // Attempt to fetch real stats if we are on the dashboard
+    fetch('http://127.0.0.1:8000/dashboard-stats')
+      .then(res => res.json())
+      .then(data => {
+        // Find specific target elements
+        const statFiles = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('Files Scanned'));
+        const statPii = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('PII Detected'));
+        const statHighRisk = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('Risk Alerts'));
+        
+        if (statFiles) statFiles.dataset.count = data.files_scanned;
+        if (statPii) statPii.dataset.count = data.pii_detected;
+        if (statHighRisk) statHighRisk.dataset.count = data.high_risk;
+        
+        startCounters();
+      })
+      .catch(err => {
+        console.error("Could not load real dashboard stats, using fallbacks:", err);
+        startCounters();
+      });
+  }
+
+  function startCounters() {
     const counterObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

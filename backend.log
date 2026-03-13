@@ -1,0 +1,19 @@
+INFO:     Started server process [62865]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62378 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /scan/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62431 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62431 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62448 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62457 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62459 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62468 - "POST /scan/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62477 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62477 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62491 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62495 - "POST /scan/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62504 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62504 - "GET /dashboard-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62516 - "GET /dashboard-stats HTTP/1.1" 200 OK

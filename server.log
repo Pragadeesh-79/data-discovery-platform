@@ -117,3 +117,9 @@ INFO:     Finished server process [52491]
 INFO:     Started server process [52636]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     127.0.0.1:61565 - "POST /upload HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [52636]
+INFO:     Stopping reloader process [18789]

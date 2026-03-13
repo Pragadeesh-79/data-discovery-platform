@@ -15,6 +15,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import our scan routes router from the api module
 from api.scan_routes import router as scan_router
+from api.dashboard_routes import router as dashboard_router
 
 # Initialize the FastAPI app
 # Title and version will appear in the automatically generated Swagger UI API documentation
@@ -43,6 +44,7 @@ app.add_middleware(
 
 # Include all routes defined in api/scan_routes.py
 app.include_router(scan_router)
+app.include_router(dashboard_router)
 
 # ---------------------------------------------------------
 # API Endpoints
