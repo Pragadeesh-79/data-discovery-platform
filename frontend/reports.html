@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DataShield DPDPA Compliance Reports — Risk assessment, audit trails, and compliance status for personal data protection.">
-  <title>DPDPA Compliance & Reports — DataShield</title>
+  <meta name="description" content="Cipher DPDPA Compliance Reports — Risk assessment, audit trails, and compliance status for personal data protection.">
+  <title>DPDPA Compliance & Reports — Cipher</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@
     <div class="container">
       <a href="index.html" class="navbar-logo">
         <div class="logo-icon"><i class="fas fa-shield-halved"></i></div>
-        DataShield
+        Cipher
       </a>
       <div class="navbar-links" id="navLinks">
         <a href="index.html">Dashboard</a>
@@ -34,172 +34,248 @@
   <!-- ═══ REPORTS PAGE ═══ -->
   <section class="scanner-page">
     <div class="container">
-      <div class="section-header" style="margin-bottom:40px;">
-        <span class="section-label">Compliance Center</span>
-        <h2>DPDPA <span class="gradient-text">Compliance Reports</span></h2>
-        <p class="section-subtitle">Monitor your organization's compliance status with India's Digital Personal Data Protection Act. Generate audit-ready reports.</p>
-      </div>
-
-      <!-- Compliance Score -->
-      <div class="stats-row reveal">
-        <div class="stat-card">
-          <div class="stat-icon">🛡️</div>
-          <div class="stat-number" data-count="78" style="color:var(--accent-orange);">0</div>
-          <div class="stat-title">Compliance Score</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">✅</div>
-          <div class="stat-number" data-count="12" style="color:var(--accent-green);">0</div>
-          <div class="stat-title">Checks Passed</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">⚠️</div>
-          <div class="stat-number" data-count="4" style="color:var(--accent-orange);">0</div>
-          <div class="stat-title">Warnings</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">❌</div>
-          <div class="stat-number" data-count="2" style="color:var(--accent-red);">0</div>
-          <div class="stat-title">Failures</div>
-        </div>
-      </div>
-
-      <!-- Compliance Checklist -->
-      <div class="reveal" style="margin-top:20px;">
-        <h3 style="margin-bottom:24px;display:flex;align-items:center;gap:12px;">
-          <i class="fas fa-clipboard-check" style="color:var(--accent-blue)"></i>
-          DPDPA Compliance Checklist
-        </h3>
-
-        <div class="compliance-grid">
-          <div class="compliance-card">
-            <h4><span class="check-icon">✅</span> Data Principal Rights</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Right to access, correct, and erase personal data is implemented.</p>
-            <span class="compliance-status pass">Passed</span>
+      <div class="coinbase-dashboard reveal">
+        <div class="cb-header">
+          <div class="cb-header-left">
+            <h2>DPDPA Compliance Posture</h2>
+            <p>In the past 24 hours compliance confidence is up <span class="cb-green-text">↗ 1.45%</span></p>
           </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">✅</span> Data Inventory</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Complete inventory of personal data with classification and risk scoring.</p>
-            <span class="compliance-status pass">Passed</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">✅</span> Purpose Limitation</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Personal data usage tracked against stated collection purposes.</p>
-            <span class="compliance-status pass">Passed</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">⚠️</span> Consent Management</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Consent records partially implemented. 3 departments pending verification.</p>
-            <span class="compliance-status warning">Warning</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">⚠️</span> Data Retention Policy</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Retention periods defined but automated deletion not yet enforced.</p>
-            <span class="compliance-status warning">Warning</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">✅</span> Breach Notification</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Automated breach detection and notification system configured.</p>
-            <span class="compliance-status pass">Passed</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">❌</span> Cross-Border Transfer</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">Cross-border data transfer safeguards not configured for 2 data flows.</p>
-            <span class="compliance-status fail">Failed</span>
-          </div>
-
-          <div class="compliance-card">
-            <h4><span class="check-icon">✅</span> Data Protection Officer</h4>
-            <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:8px;">DPO appointed and registered with the Data Protection Board.</p>
-            <span class="compliance-status pass">Passed</span>
+          <div class="cb-search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for a compliance rule">
           </div>
         </div>
-      </div>
 
-      <!-- Risk Summary Table -->
-      <div class="reveal" style="margin-top:48px;">
-        <h3 style="margin-bottom:20px;display:flex;align-items:center;gap:12px;">
-          <i class="fas fa-chart-pie" style="color:var(--accent-purple)"></i>
-          Risk Summary by Department
-        </h3>
-
-        <div class="detection-showcase">
-          <div class="detection-header">
-            <h4>Department Risk Assessment</h4>
-            <button class="btn btn-secondary btn-sm"><i class="fas fa-file-export"></i> Export Report</button>
+        <div class="cb-top-cards">
+          <!-- Card 1: Consent -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-handshake"></i> Consent Management</span>
+              <a href="#">Manage &gt;</a>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#2563eb;color:#fff;"><i class="fas fa-check-double"></i></div>
+                <div class="cb-item-info">
+                  <h4>Valid Consent</h4>
+                  <p>Verified</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">84% Cov</div>
+                <div class="cb-item-trend cb-trend-up">↗ 12.4%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#eab308;color:#000;"><i class="fas fa-undo"></i></div>
+                <div class="cb-item-info">
+                  <h4>Consent Revoked</h4>
+                  <p>Actioned</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">120 Req</div>
+                <div class="cb-item-trend cb-trend-up">↗ 1.5%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#ef4444;color:#fff;"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="cb-item-info">
+                  <h4>Legacy Data</h4>
+                  <p>Needs Refresh</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">16% Gap</div>
+                <div class="cb-item-trend cb-trend-down">↘ 2.1%</div>
+              </div>
+            </div>
           </div>
-          <table class="detection-table">
+
+          <!-- Card 2: Principles -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-balance-scale"></i> Core Principles</span>
+              <a href="#">Manage &gt;</a>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#10b981;color:#fff;"><i class="fas fa-compress-arrows-alt"></i></div>
+                <div class="cb-item-info">
+                  <h4>Data Minimization</h4>
+                  <p>Compliant</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">92% Rate</div>
+                <div class="cb-item-trend cb-trend-up">↗ 4.2%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#8b5cf6;color:#fff;"><i class="fas fa-bullseye"></i></div>
+                <div class="cb-item-info">
+                  <h4>Purpose Lim</h4>
+                  <p>Compliant</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">98% Rate</div>
+                <div class="cb-item-trend cb-trend-up">↗ 1.1%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#f97316;color:#fff;"><i class="fas fa-trash-alt"></i></div>
+                <div class="cb-item-info">
+                  <h4>Storage Lim</h4>
+                  <p>Warning</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">75% Rate</div>
+                <div class="cb-item-trend cb-trend-down">↘ 6.5%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Safeguards -->
+          <div class="cb-card">
+            <div class="cb-card-header">
+              <span><i class="fas fa-shield-alt"></i> Security Safeguards</span>
+              <a href="#">Manage &gt;</a>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#06b6d4;color:#fff;"><i class="fas fa-lock"></i></div>
+                <div class="cb-item-info">
+                  <h4>Encryption (Rest)</h4>
+                  <p>Secured</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">100% AES</div>
+                <div class="cb-item-trend cb-trend-up">↗ 0.0%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#ec4899;color:#fff;"><i class="fas fa-network-wired"></i></div>
+                <div class="cb-item-info">
+                  <h4>Data in Transit</h4>
+                  <p>Secured</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">TLS 1.3</div>
+                <div class="cb-item-trend cb-trend-up">↗ 0.0%</div>
+              </div>
+            </div>
+            <div class="cb-list-item">
+              <div class="cb-item-left">
+                <div class="cb-item-icon" style="background:#64748b;color:#fff;"><i class="fas fa-users-cog"></i></div>
+                <div class="cb-item-info">
+                  <h4>Access Control</h4>
+                  <p>Audit Required</p>
+                </div>
+              </div>
+              <div class="cb-item-right">
+                <div class="cb-item-value">88% Scope</div>
+                <div class="cb-item-trend cb-trend-down">↘ 1.2%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Data Table -->
+        <div class="cb-main-panel">
+          <div class="cb-panel-header">
+            <div class="cb-panel-title">
+              Compliance Checks <span class="cb-panel-subtitle">42 Rules Executed</span>
+            </div>
+            <div class="cb-filters">
+              <div class="cb-tabs">
+                <button class="cb-tab active"><i class="fas fa-list"></i> All checks</button>
+                <button class="cb-tab">Passed</button>
+                <button class="cb-tab">Failed</button>
+                <button class="cb-tab">Warnings</button>
+              </div>
+              <div class="cb-filter-dropdown" style="margin-left:16px;">Week <i class="fas fa-chevron-down"></i></div>
+              <button class="cb-filter-dropdown" onclick="downloadPDF()" style="background:transparent;border:1px solid rgba(255,255,255,0.1);">PDF Report <i class="fas fa-download"></i></button>
+            </div>
+          </div>
+
+          <table class="cb-table">
             <thead>
               <tr>
-                <th>Department</th>
-                <th>PII Records</th>
-                <th>High Risk</th>
-                <th>Medium Risk</th>
-                <th>Low Risk</th>
+                <th>Rule Name</th>
+                <th>Check Details</th>
+                <th>Chart</th>
+                <th>Change</th>
                 <th>Status</th>
+                <th>Completion</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Human Resources</strong></td>
-                <td>842</td>
-                <td><span style="color:var(--accent-red);font-weight:700;">18</span></td>
-                <td><span style="color:var(--accent-orange);font-weight:700;">45</span></td>
-                <td><span style="color:var(--accent-green);font-weight:700;">779</span></td>
-                <td><span class="risk-indicator high">High</span></td>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#10b981;color:#fff;"><i class="fas fa-check"></i></div>
+                  <div class="cb-name-text">
+                    <strong>Right to Access</strong>
+                    <span>DSR-01</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">Data Subject Requests</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="up" d="M0 24 L20 12 L40 16 L60 4 L80 0"></path></svg>
+                </td>
+                <td class="cb-trend-up">↗ 12.4%</td>
+                <td class="cb-col-stat"><span style="color:#10b981;">Passed</span></td>
+                <td class="cb-col-stat">100%</td>
+                <td><button class="cb-action-btn">Audit Log</button></td>
               </tr>
               <tr>
-                <td><strong>Finance</strong></td>
-                <td>624</td>
-                <td><span style="color:var(--accent-red);font-weight:700;">12</span></td>
-                <td><span style="color:var(--accent-orange);font-weight:700;">38</span></td>
-                <td><span style="color:var(--accent-green);font-weight:700;">574</span></td>
-                <td><span class="risk-indicator high">High</span></td>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#ef4444;color:#fff;"><i class="fas fa-times"></i></div>
+                  <div class="cb-name-text">
+                    <strong>Data Transfer (Intl)</strong>
+                    <span>CB-04</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">Cross-border flow mapping</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="down" d="M0 4 L20 8 L40 6 L60 16 L80 20"></path></svg>
+                </td>
+                <td class="cb-trend-down">↘ 4.5%</td>
+                <td class="cb-col-stat"><span style="color:#ef4444;">Failed</span></td>
+                <td class="cb-col-stat">42%</td>
+                <td><button class="cb-action-btn" style="background:#ef4444;">Fix Now</button></td>
               </tr>
               <tr>
-                <td><strong>Marketing</strong></td>
-                <td>456</td>
-                <td><span style="color:var(--accent-red);font-weight:700;">2</span></td>
-                <td><span style="color:var(--accent-orange);font-weight:700;">89</span></td>
-                <td><span style="color:var(--accent-green);font-weight:700;">365</span></td>
-                <td><span class="risk-indicator medium">Medium</span></td>
-              </tr>
-              <tr>
-                <td><strong>Legal</strong></td>
-                <td>318</td>
-                <td><span style="color:var(--accent-red);font-weight:700;">5</span></td>
-                <td><span style="color:var(--accent-orange);font-weight:700;">22</span></td>
-                <td><span style="color:var(--accent-green);font-weight:700;">291</span></td>
-                <td><span class="risk-indicator medium">Medium</span></td>
-              </tr>
-              <tr>
-                <td><strong>Operations</strong></td>
-                <td>187</td>
-                <td><span style="color:var(--accent-red);font-weight:700;">0</span></td>
-                <td><span style="color:var(--accent-orange);font-weight:700;">12</span></td>
-                <td><span style="color:var(--accent-green);font-weight:700;">175</span></td>
-                <td><span class="risk-indicator low">Low</span></td>
+                <td class="cb-col-name">
+                  <i class="far fa-star"></i>
+                  <div class="cb-icon-wrap" style="background:#f59e0b;color:#fff;"><i class="fas fa-exclamation"></i></div>
+                  <div class="cb-name-text">
+                    <strong>Notice Provided</strong>
+                    <span>CON-02</span>
+                  </div>
+                </td>
+                <td class="cb-col-stat">Privacy Policy version checks</td>
+                <td>
+                  <svg class="cb-sparkline"><path class="neutral" d="M0 12 L20 14 L40 10 L60 12 L80 12"></path></svg>
+                </td>
+                <td class="cb-trend-up" style="color:#888896;">— 0.0%</td>
+                <td class="cb-col-stat"><span style="color:#f59e0b;">Warning</span></td>
+                <td class="cb-col-stat">89%</td>
+                <td><button class="cb-action-btn">Audit Log</button></td>
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-
-      <!-- Export Actions -->
-      <div class="reveal" style="margin-top:48px;">
-        <div class="cta-box">
-          <h3>Generate Full Compliance Report</h3>
-          <p style="color:var(--text-secondary);margin:12px 0 24px;">Download a comprehensive DPDPA-aligned audit report for your organization.</p>
-          <div class="hero-buttons" style="margin-bottom:0;">
-            <button class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF Report</button>
-            <button class="btn btn-secondary btn-lg"><i class="fas fa-file-csv"></i> Export CSV Data</button>
-          </div>
         </div>
       </div>
     </div>
@@ -209,7 +285,7 @@
   <footer class="footer" style="margin-top:80px;">
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
-        <span>&copy; 2026 DataShield. DPDPA-Aligned Personal Data Discovery Platform.</span>
+        <span>&copy; 2026 Cipher. DPDPA-Aligned Personal Data Discovery Platform.</span>
         <div class="footer-socials">
           <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -219,5 +295,43 @@
   </footer>
 
   <script src="js/dashboard.js"></script>
+  <!-- html2pdf library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.querySelector('.cb-main-panel');
+      
+      // Temporarily stash styles that might break html2pdf rendering
+      const originalBorder = element.style.border;
+      const originalRadius = element.style.borderRadius;
+      const originalBg = element.style.background;
+      
+      // html2pdf likes solid backgrounds instead of glassmorphism for better output
+      element.style.background = '#0a0a0f'; // Solid dark bg
+      element.style.border = 'none';
+      element.style.borderRadius = '0';
+      
+      const opt = {
+        margin:       0.5,
+        filename:     'Cipher_DPDPA_Compliance_Audit.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0a0a0f' },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+      };
+
+      // Ensure button provides feedback by changing text momentarily
+      const btn = document.querySelector('.cb-filter-dropdown[onclick="downloadPDF()"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Downloading... <i class="fas fa-spinner fa-spin"></i>';
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        // Restore original styles
+        element.style.background = originalBg;
+        element.style.border = originalBorder;
+        element.style.borderRadius = originalRadius;
+        btn.innerHTML = originalText;
+      });
+    }
+  </script>
 </body>
 </html>

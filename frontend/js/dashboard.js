@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   DataShield — Dashboard Interactions & Animations
+   Cipher — Dashboard Interactions & Animations
    ═══════════════════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
