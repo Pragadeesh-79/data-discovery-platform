@@ -56,3 +56,25 @@ async function submitScanResult(record) {
         return null;
     }
 }
+
+/**
+ * Uploads a file to the backend for real PII scanning.
+ * @param {File} file - The file to upload.
+ */
+async function uploadFileForScan(file) {
+    console.log("Uploading file...", file.name);
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/scan/upload`, {
+            method: "POST",
+            body: formData
+            // Note: When using FormData, do NOT set 'Content-Type' manually.   
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Scan response:", data);
+        return data;

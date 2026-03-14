@@ -1,77 +1,11 @@
-// frontend/js/scanner.js
+import re
 
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Grab DOM Elements
-    const fileInput = document.getElementById("fileUploadInput");
-    const uploadBtn = document.getElementById("uploadProcessBtn");
-    const uploadText = document.getElementById("uploadText");
-    
-    const progressSection = document.querySelector(".scan-progress");
-    const progressFill = document.querySelector(".progress-bar-fill");
-    const progressText = document.querySelector(".progress-text");
-    
-    const resultsSection = document.querySelector(".scan-results");
-    const resultsBody = document.getElementById("scanResultsBody");
-    
-    let selectedFile = null;
+with open(r"d:\HACKATHON\data-discovery-platform\frontend\js\scanner.js", "r", encoding="utf-8") as f:
+    content = f.read()
 
-    // 2. File Selection Logic
-    if (uploadBtn) {
-        uploadBtn.addEventListener("click", () => {
-            if (!selectedFile && fileInput.files.length > 0) {
-                selectedFile = fileInput.files[0];
-            }
-            if (!selectedFile) {
-                fileInput.click();
-                return;
-            }
-            handleScan();
-        });
-    }
+pattern = re.compile(r"try\s*\{.*?\}\s*catch\s*\(error\)\s*\{.*?\}\s*finally\s*\{", re.DOTALL)
 
-    if (fileInput) {
-        fileInput.addEventListener("change", function () {
-            if (this.files.length > 0) {
-                selectedFile = this.files[0];
-                if (uploadText) {
-                    uploadText.innerText = `Selected: ${selectedFile.name}. Click Upload!`;
-                    uploadText.style.color = "#4ade80";
-                }
-            }
-        });
-    }
-
-    // 3. Scan & Integration Logic
-    async function handleScan() {
-        if (!selectedFile) return;
-
-        // SAFEGUARD: Ensure api.js loaded correctly before proceeding
-        if (typeof submitScanResult !== "function") {
-            const errMsg = "Critical Error: API helper (api.js) is missing! Ensure api.js is loaded above scanner.js in scan.html";
-            console.error(errMsg);
-            alert(errMsg);
-            return;
-        }
-        
-        // Lock UI State
-        uploadBtn.disabled = true;
-        uploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Scanning...';
-        
-        if (progressSection) progressSection.style.display = "block";
-        if (resultsSection) resultsSection.style.display = "none";
-
-        // Fun hackathon simulation: Fake progress bar
-        let fakeProg = 5;
-        let pInterval = setInterval(() => {
-            if (fakeProg < 90) {
-                fakeProg += Math.floor(Math.random() * 15) + 5;
-                if (fakeProg > 90) fakeProg = 90;
-                if (progressFill) progressFill.style.width = fakeProg + "%";
-                if (progressText) progressText.innerText = `Analyzing content... (${fakeProg}%)`;
-            }
-        }, 500);
-
-        try {
+new_try_block = """try {
             if (typeof uploadFileForScan !== "function") {
                 throw new Error("Missing uploadFileForScan. Please ensure the latest api.js is loaded.");
             }
@@ -133,16 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (progressText) progressText.innerText = "Scan failed!";
             console.error("[SCANNER ERROR]", error);
             alert("An error occurred during the scan or database push. Check the browser console.");
-        } finally {
-            // Restore UI Buttons
-            uploadBtn.disabled = false;
-            uploadBtn.innerHTML = '<i class="fas fa-shield-halved"></i> Upload and Scan';
-            selectedFile = null;
-            if (fileInput) fileInput.value = "";
-            if (uploadText) {
-                uploadText.innerText = `or click to browse your computer`;
-                uploadText.style.color = "";
-            }
-        }
-    }
-});
+        } finally {"""
+
+content = pattern.sub(new_try_block, content)
+
+with open(r"d:\HACKATHON\data-discovery-platform\frontend\js\scanner.js", "w", encoding="utf-8") as f:
+    f.write(content)
+print("Updated scanner.js successfully")

@@ -24,6 +24,8 @@ Base.metadata.create_all(bind=engine)
 
 # Import our scan routes router from the api module
 from api.scan_routes import router as scan_router
+# Import our new upload routes
+from api.upload_routes import router as upload_router
 # Depending on your latest codebase struct if dashboard routes are separate, you can optionally include them as well
 try:
     from api.dashboard_routes import router as dashboard_router
@@ -58,6 +60,7 @@ app.add_middleware(
 
 # Include all routes defined in api/scan_routes.py
 app.include_router(scan_router)
+app.include_router(upload_router)
 if has_dashboard:
     app.include_router(dashboard_router)
 
