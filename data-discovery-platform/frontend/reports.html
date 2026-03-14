@@ -34,248 +34,185 @@
   <!-- ═══ REPORTS PAGE ═══ -->
   <section class="scanner-page">
     <div class="container">
-      <div class="coinbase-dashboard reveal">
-        <div class="cb-header">
-          <div class="cb-header-left">
+      <div class="crypto-dashboard reveal">
+        <div class="crypto-header">
+          <div class="crypto-header-left">
             <h2>DPDPA Compliance Posture</h2>
-            <p>In the past 24 hours compliance confidence is up <span class="cb-green-text">↗ 1.45%</span></p>
+            <p>Mapped to GET /dashboard-stats · Last compliance run: 5 min ago</p>
           </div>
-          <div class="cb-search-bar">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search for a compliance rule">
-          </div>
-        </div>
-
-        <div class="cb-top-cards">
-          <!-- Card 1: Consent -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-handshake"></i> Consent Management</span>
-              <a href="#">Manage &gt;</a>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#2563eb;color:#fff;"><i class="fas fa-check-double"></i></div>
-                <div class="cb-item-info">
-                  <h4>Valid Consent</h4>
-                  <p>Verified</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">84% Cov</div>
-                <div class="cb-item-trend cb-trend-up">↗ 12.4%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#eab308;color:#000;"><i class="fas fa-undo"></i></div>
-                <div class="cb-item-info">
-                  <h4>Consent Revoked</h4>
-                  <p>Actioned</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">120 Req</div>
-                <div class="cb-item-trend cb-trend-up">↗ 1.5%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#ef4444;color:#fff;"><i class="fas fa-exclamation-triangle"></i></div>
-                <div class="cb-item-info">
-                  <h4>Legacy Data</h4>
-                  <p>Needs Refresh</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">16% Gap</div>
-                <div class="cb-item-trend cb-trend-down">↘ 2.1%</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Principles -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-balance-scale"></i> Core Principles</span>
-              <a href="#">Manage &gt;</a>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#10b981;color:#fff;"><i class="fas fa-compress-arrows-alt"></i></div>
-                <div class="cb-item-info">
-                  <h4>Data Minimization</h4>
-                  <p>Compliant</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">92% Rate</div>
-                <div class="cb-item-trend cb-trend-up">↗ 4.2%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#8b5cf6;color:#fff;"><i class="fas fa-bullseye"></i></div>
-                <div class="cb-item-info">
-                  <h4>Purpose Lim</h4>
-                  <p>Compliant</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">98% Rate</div>
-                <div class="cb-item-trend cb-trend-up">↗ 1.1%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#f97316;color:#fff;"><i class="fas fa-trash-alt"></i></div>
-                <div class="cb-item-info">
-                  <h4>Storage Lim</h4>
-                  <p>Warning</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">75% Rate</div>
-                <div class="cb-item-trend cb-trend-down">↘ 6.5%</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Safeguards -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-shield-alt"></i> Security Safeguards</span>
-              <a href="#">Manage &gt;</a>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#06b6d4;color:#fff;"><i class="fas fa-lock"></i></div>
-                <div class="cb-item-info">
-                  <h4>Encryption (Rest)</h4>
-                  <p>Secured</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">100% AES</div>
-                <div class="cb-item-trend cb-trend-up">↗ 0.0%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#ec4899;color:#fff;"><i class="fas fa-network-wired"></i></div>
-                <div class="cb-item-info">
-                  <h4>Data in Transit</h4>
-                  <p>Secured</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">TLS 1.3</div>
-                <div class="cb-item-trend cb-trend-up">↗ 0.0%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#64748b;color:#fff;"><i class="fas fa-users-cog"></i></div>
-                <div class="cb-item-info">
-                  <h4>Access Control</h4>
-                  <p>Audit Required</p>
-                </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">88% Scope</div>
-                <div class="cb-item-trend cb-trend-down">↘ 1.2%</div>
-              </div>
-            </div>
+          <div class="crypto-header-right">
+            <button class="crypto-btn" onclick="downloadPDF()">Export PDF <i class="fas fa-download" style="margin-left:4px;"></i></button>
+            <button class="crypto-btn"><i class="fas fa-cog"></i> Settings</button>
+            <button class="crypto-btn" style="border-radius:20px;padding:4px 12px;"><i class="fas fa-shield-alt" style="font-size:1.2rem;color:#10b981;"></i></button>
           </div>
         </div>
 
-        <!-- Main Data Table -->
-        <div class="cb-main-panel">
-          <div class="cb-panel-header">
-            <div class="cb-panel-title">
-              Compliance Checks <span class="cb-panel-subtitle">42 Rules Executed</span>
+        <div class="crypto-grid-top">
+          <!-- Widget 1: Risk Summary (GET /risk-summary) -->
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title">Non-Compliant Data Exposure</div>
+              <i class="fas fa-exclamation-triangle" style="font-size:0.8rem;color:#ef4444;"></i>
             </div>
-            <div class="cb-filters">
-              <div class="cb-tabs">
-                <button class="cb-tab active"><i class="fas fa-list"></i> All checks</button>
-                <button class="cb-tab">Passed</button>
-                <button class="cb-tab">Failed</button>
-                <button class="cb-tab">Warnings</button>
-              </div>
-              <div class="cb-filter-dropdown" style="margin-left:16px;">Week <i class="fas fa-chevron-down"></i></div>
-              <button class="cb-filter-dropdown" onclick="downloadPDF()" style="background:transparent;border:1px solid rgba(255,255,255,0.1);">PDF Report <i class="fas fa-download"></i></button>
+            <div class="crypto-exposure-value">
+              8.42% <span class="crypto-trend-down">▼ -1.15%</span>
+            </div>
+            <div class="crypto-chart-area">
+              <svg class="crypto-chart-svg" viewBox="0 0 200 60" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="red-glow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+                <path style="fill:url(#red-glow); filter:drop-shadow(0px -5px 15px rgba(239, 68, 68, 0.4));" d="M0,60 L0,30 C50,55 100,10 150,25 C180,30 200,5 200,5 L200,60 Z"></path>
+                <path style="fill:none; stroke:#ef4444; stroke-width:2; filter:drop-shadow(0px 0px 8px rgba(239, 68, 68, 0.6));" d="M0,30 C50,55 100,10 150,25 C180,30 200,5 200,5"></path>
+                <circle cx="150" cy="25" r="3" fill="#fff" stroke="#ef4444" stroke-width="2"></circle>
+              </svg>
+            </div>
+            <div class="crypto-chart-labels">
+               <span>GET</span><span>/risk</span><span>-summary</span><span>API</span><span>Map</span>
             </div>
           </div>
 
-          <table class="cb-table">
-            <thead>
-              <tr>
-                <th>Rule Name</th>
-                <th>Check Details</th>
-                <th>Chart</th>
-                <th>Change</th>
-                <th>Status</th>
-                <th>Completion</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#10b981;color:#fff;"><i class="fas fa-check"></i></div>
-                  <div class="cb-name-text">
-                    <strong>Right to Access</strong>
-                    <span>DSR-01</span>
+          <!-- Widget 2: Recent Scans (POST /scan-results) -->
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title">Recent Audits (POST)</div>
+              <div class="crypto-card-action">Live <i class="fas fa-circle crypto-trend-down" style="font-size:0.5rem;margin-left:4px;vertical-align:middle;animation:pulse-dot 2s infinite;"></i></div>
+            </div>
+            <div class="crypto-list">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#10b981;"><i class="fas fa-check-circle"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Consent Registry</h4>
+                    <p>Passed 42 checks</p>
                   </div>
-                </td>
-                <td class="cb-col-stat">Data Subject Requests</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="up" d="M0 24 L20 12 L40 16 L60 4 L80 0"></path></svg>
-                </td>
-                <td class="cb-trend-up">↗ 12.4%</td>
-                <td class="cb-col-stat"><span style="color:#10b981;">Passed</span></td>
-                <td class="cb-col-stat">100%</td>
-                <td><button class="cb-action-btn">Audit Log</button></td>
-              </tr>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#ef4444;color:#fff;"><i class="fas fa-times"></i></div>
-                  <div class="cb-name-text">
-                    <strong>Data Transfer (Intl)</strong>
-                    <span>CB-04</span>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">100% Cov</div>
+                  <div class="crypto-item-sub">10:45 Am</div>
+                </div>
+              </div>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#f59e0b;"><i class="fas fa-exclamation-circle"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>HR Database</h4>
+                    <p>Data minimizing failed</p>
                   </div>
-                </td>
-                <td class="cb-col-stat">Cross-border flow mapping</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="down" d="M0 4 L20 8 L40 6 L60 16 L80 20"></path></svg>
-                </td>
-                <td class="cb-trend-down">↘ 4.5%</td>
-                <td class="cb-col-stat"><span style="color:#ef4444;">Failed</span></td>
-                <td class="cb-col-stat">42%</td>
-                <td><button class="cb-action-btn" style="background:#ef4444;">Fix Now</button></td>
-              </tr>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#f59e0b;color:#fff;"><i class="fas fa-exclamation"></i></div>
-                  <div class="cb-name-text">
-                    <strong>Notice Provided</strong>
-                    <span>CON-02</span>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val" style="color:#f59e0b; font-size: 0.85rem; font-weight: 500; margin-bottom: 4px;">Warning</div>
+                  <div class="crypto-item-sub">09:15 Am</div>
+                </div>
+              </div>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#ef4444;"><i class="fas fa-times-circle"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Legacy CRM</h4>
+                    <p>Storage limit breach</p>
                   </div>
-                </td>
-                <td class="cb-col-stat">Privacy Policy version checks</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="neutral" d="M0 12 L20 14 L40 10 L60 12 L80 12"></path></svg>
-                </td>
-                <td class="cb-trend-up" style="color:#888896;">— 0.0%</td>
-                <td class="cb-col-stat"><span style="color:#f59e0b;">Warning</span></td>
-                <td class="cb-col-stat">89%</td>
-                <td><button class="cb-action-btn">Audit Log</button></td>
-              </tr>
-            </tbody>
-          </table>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val down">-12% Score</div>
+                  <div class="crypto-item-sub">Yesterday</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget 3: PII Types Control (GET /pii-types) -->
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title">PII Rule Binding</div>
+              <i class="fas fa-link" style="font-size:0.8rem;cursor:pointer;"></i>
+            </div>
+            <div class="crypto-trade-tabs">
+              <div class="crypto-tab active">Bind</div>
+              <div class="crypto-tab">Unbind</div>
+              <div class="crypto-tab">Revoke</div>
+            </div>
+            <div class="crypto-input-group">
+              <div class="crypto-input-label">Data Asset (GET /inventory)</div>
+              <div class="crypto-input-row">
+                <button class="crypto-select"><i class="fas fa-database" style="color:#8b5cf6;margin-right:8px;"></i> HR Core <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:8px;color:#71717a"></i></button>
+                <div class="crypto-input-val">12k Recs</div>
+              </div>
+              <div class="crypto-input-sub">
+                <span>Contains Financial Data</span>
+                <span class="crypto-trend-down">High Risk</span>
+              </div>
+              <div class="crypto-swap-btn"><i class="fas fa-arrow-down"></i></div>
+            </div>
+            
+            <div class="crypto-input-group" style="margin-bottom:0;">
+              <div class="crypto-input-label">DPDPA Principle</div>
+              <div class="crypto-input-row">
+                <button class="crypto-select"><i class="fas fa-balance-scale" style="color:#2dd4bf;margin-right:8px;"></i> Storage Limit <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:8px;color:#71717a"></i></button>
+              </div>
+              <div class="crypto-input-sub">
+                <span>Enforce 30-day retention</span>
+                <span>Active</span>
+              </div>
+            </div>
+            <button class="crypto-submit-btn">Execute Binding <i class="fas fa-check" style="margin-left:4px;font-size:0.8rem;"></i></button>
+          </div>
+        </div>
+
+        <div class="crypto-grid-bottom">
+          <!-- Widget 4: Total Inventory (GET /inventory) -->
+          <div class="crypto-card pdf-export-target" style="padding-bottom:12px;">
+            <div class="crypto-card-header" style="margin-bottom:12px;">
+              <div class="crypto-card-title">Total Scanned Assets Over Time</div>
+              <div style="display:flex;gap:8px;">
+                <div class="crypto-card-action">1M</div>
+                <div class="crypto-card-action">3M</div>
+                <div class="crypto-card-action" style="background:#27272a;color:#fff;">YTD</div>
+              </div>
+            </div>
+            <div class="crypto-card-header" style="margin-bottom:0;">
+              <div class="crypto-assets-val">2.4M <span>Assets Scanned</span> <span class="crypto-trend-up" style="font-size:0.85rem;margin-left:12px;">▲ +12%</span></div>
+            </div>
+
+            <div class="crypto-chart-large">
+              <div class="y-axis-labels">
+                <span>3M</span><span>2M</span><span>1M</span><span>0</span>
+              </div>
+              <svg class="crypto-chart-svg-large" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <!-- Grid Lines -->
+                <line x1="0" y1="10" x2="400" y2="10" class="chart-grid-line"></line>
+                <line x1="0" y1="55" x2="400" y2="55" class="chart-grid-line"></line>
+                <line x1="0" y1="100" x2="400" y2="100" class="chart-grid-line"></line>
+                <line x1="0" y1="145" x2="400" y2="145" class="chart-grid-line"></line>
+                
+                <!-- Chart Line -->
+                <path style="fill:none; stroke:#3b82f6; stroke-width:2; filter:drop-shadow(0px 0px 8px rgba(59, 130, 246, 0.6));" d="M0,130 L40,110 L80,100 L120,80 L160,85 L200,60 L240,40 L280,30 L320,45 L360,20 L400,10"></path>
+              </svg>
+              <div class="chart-data-line" style="left:70%;"></div>
+              <div class="chart-data-point" style="left:70%; top:23.3%; border-color:#3b82f6; box-shadow:0 0 10px #3b82f6;"></div>
+              
+              <div class="crypto-chart-labels" style="margin-left:40px;">
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget 5: Dashboard CTA (GET /dashboard-stats) -->
+          <div class="crypto-card crypto-alert-card" style="background: linear-gradient(145deg, #18181b 0%, #052e16 100%);">
+            <div class="crypto-alert-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981; box-shadow: 0 0 30px rgba(16, 185, 129, 0.3); border: 1px solid rgba(16, 185, 129, 0.2);">
+              <i class="fas fa-check-shield"></i>
+            </div>
+            <div class="crypto-alert-badge" style="color: #10b981;"><i class="fas fa-certificate"></i> DPDPA Ready Validation</div>
+            <div class="crypto-alert-val">91.5%<span>score</span></div>
+            <p class="crypto-alert-desc">Your enterprise overall compliance score is excellent. Keep auditing regular data flows.</p>
+            <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.75rem;color:#71717a;">GET /dashboard-stats</span>
+              <div class="crypto-card-action" style="padding:6px 12px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -299,7 +236,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadPDF() {
-      const element = document.querySelector('.cb-main-panel');
+      const element = document.querySelector('.crypto-dashboard');
       
       // Temporarily stash styles that might break html2pdf rendering
       const originalBorder = element.style.border;
@@ -307,7 +244,7 @@
       const originalBg = element.style.background;
       
       // html2pdf likes solid backgrounds instead of glassmorphism for better output
-      element.style.background = '#0a0a0f'; // Solid dark bg
+      element.style.background = '#09090b'; // Solid dark bg
       element.style.border = 'none';
       element.style.borderRadius = '0';
       
@@ -315,12 +252,12 @@
         margin:       0.5,
         filename:     'Cipher_DPDPA_Compliance_Audit.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0a0a0f' },
+        html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#09090b' },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
       };
 
       // Ensure button provides feedback by changing text momentarily
-      const btn = document.querySelector('.cb-filter-dropdown[onclick="downloadPDF()"]');
+      const btn = document.querySelector('button[onclick="downloadPDF()"]');
       const originalText = btn.innerHTML;
       btn.innerHTML = 'Downloading... <i class="fas fa-spinner fa-spin"></i>';
 
