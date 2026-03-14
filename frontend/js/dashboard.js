@@ -1,314 +1,80 @@
-/* ═══════════════════════════════════════════════════════════════
-   Cipher — Dashboard Interactions & Animations
-   ═══════════════════════════════════════════════════════════════ */
+// frontend/js/dashboard.js
 
-document.addEventListener('DOMContentLoaded', () => {
+let piiChartInstance = null; // Store chart instance to destroy it before re-rendering
 
-  // ── Navbar Scroll Effect ──
-  const navbar = document.getElementById('navbar');
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-  }
+document.addEventListener("DOMContentLoaded", async () => {
+    // 1. Fetch data from backend API
+    const data = await getDashboardStats();
 
-  // ── Mobile Menu Toggle ──
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      const icon = mobileToggle.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-xmark');
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        const icon = mobileToggle.querySelector('i');
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-xmark');
-      });
-    });
-  }
-
-  // ── Smooth Scroll ──
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // ── Scroll Reveal (Intersection Observer) ──
-  const revealElements = document.querySelectorAll('.reveal');
-  if (revealElements.length > 0) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    revealElements.forEach((el, i) => {
-      el.style.transitionDelay = `${i % 4 * 0.1}s`;
-      revealObserver.observe(el);
-    });
-  }
-
-  // ── Counter Animation ──
-  const counters = document.querySelectorAll('[data-count]');
-  if (counters.length > 0) {
-    // Attempt to fetch real stats if we are on the dashboard
-    fetch('http://127.0.0.1:8000/dashboard-stats')
-      .then(res => res.json())
-      .then(data => {
-        // Find specific target elements
-        const statFiles = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('Files Scanned'));
-        const statPii = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('PII Detected'));
-        const statHighRisk = Array.from(counters).find(c => c.closest && c.closest('.dash-card') && c.closest('.dash-card').textContent.includes('Risk Alerts'));
-        
-        if (statFiles) statFiles.dataset.count = data.files_scanned;
-        if (statPii) statPii.dataset.count = data.pii_detected;
-        if (statHighRisk) statHighRisk.dataset.count = data.high_risk;
-        
-        startCounters();
-      })
-      .catch(err => {
-        console.error("Could not load real dashboard stats, using fallbacks:", err);
-        startCounters();
-      });
-  }
-
-  function startCounters() {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-  }
-
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.count);
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease-out
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-
-      el.textContent = current.toLocaleString();
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = target.toLocaleString();
-      }
+    if (!data) {
+        console.error("Failed to load dashboard data. Ensure backend is running!");
+        return;
     }
 
-    requestAnimationFrame(update);
-  }
+    // 2. Safely Update UI Elements
+    const totalRecordsEl = document.getElementById("totalRecords");
+    const riskScoreEl = document.getElementById("riskScore");
+    const complianceStatusEl = document.getElementById("complianceStatus");
 
-  // ── FAQ Accordion ──
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    if (question) {
-      question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
+    if (totalRecordsEl) totalRecordsEl.innerText = data.total_records;
+    if (riskScoreEl) riskScoreEl.innerText = data.total_risk_score;
+    if (complianceStatusEl) complianceStatusEl.innerText = data.compliance_status;
 
-        // Close all
-        faqItems.forEach(i => i.classList.remove('active'));
-
-        // Toggle current
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
+    // Apply color logic based on status
+    if (complianceStatusEl && data.compliance_status === "Review Required") {
+        complianceStatusEl.style.color = "#ff4d4d"; // Red alert
+    } else if (complianceStatusEl) {
+        complianceStatusEl.style.color = "#4ade80"; // Green safe
     }
-  });
 
-  // ── FAQ Tabs ──
-  const faqTabs = document.querySelectorAll('.faq-tab');
-  faqTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      faqTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-    });
-  });
-
-  // ── Scanner Page: Drag & Drop (Mock Removed) ──
-  // Real integration is handled in scan.html via api.js
-
-  // ── Typing Animation for Code Blocks ──
-  const codeBlocks = document.querySelectorAll('.code-block');
-  codeBlocks.forEach(block => {
-    const codeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          block.style.opacity = '0';
-          block.style.transition = 'opacity 0.5s ease';
-          setTimeout(() => {
-            block.style.opacity = '1';
-          }, 200);
-          codeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    codeObserver.observe(block);
-  });
-
-  // ── Entity Tags Stagger Animation ──
-  const entityTags = document.querySelectorAll('.entity-tag');
-  if (entityTags.length > 0) {
-    const tagObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const tags = entry.target.querySelectorAll('.entity-tag');
-          tags.forEach((tag, i) => {
-            setTimeout(() => {
-              tag.style.opacity = '1';
-              tag.style.transform = 'translateY(0)';
-            }, i * 150);
-          });
-          tagObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const tagContainers = document.querySelectorAll('.entity-tags');
-    tagContainers.forEach(container => tagObserver.observe(container));
-  }
-
-  // ── Table Row Stagger Animation ──
-  const tableRows = document.querySelectorAll('.detection-table tbody tr');
-  if (tableRows.length > 0) {
-    const tableObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const rows = entry.target.querySelectorAll('tbody tr');
-          rows.forEach((row, i) => {
-            row.style.opacity = '0';
-            row.style.transform = 'translateX(-20px)';
-            row.style.transition = `all 0.4s ease ${i * 0.1}s`;
-            setTimeout(() => {
-              row.style.opacity = '1';
-              row.style.transform = 'translateX(0)';
-            }, 100);
-          });
-          tableObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    const tables = document.querySelectorAll('.detection-showcase');
-    tables.forEach(table => tableObserver.observe(table));
-  }
-
-  // ── Particle Background Effect ──
-  createParticles();
+    // 3. Render PII Distribution Chart
+    renderPIIChart(data.pii_types);
 });
 
-function createParticles() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'particles';
-  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4;';
-  document.body.prepend(canvas);
+/**
+ * Initializes and dynamically handles Chart.js graphing 
+ */
+function renderPIIChart(piiTypes) {
+    const ctx = document.getElementById("piiChart");
+    if (!ctx) return;
 
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animationFrameId;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  resize();
-  window.addEventListener('resize', resize);
-
-  class Particle {
-    constructor() {
-      this.reset();
+    // If a chart exists, destroy it before rendering a new one to prevent glitching overlaps
+    if (piiChartInstance) {
+        piiChartInstance.destroy();
     }
 
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.5 + 0.1;
-    }
+    // Extract Keys (e.g. Email, PAN) and Values (e.g. 5, 2)
+    const labels = Object.keys(piiTypes);
+    const data = Object.values(piiTypes);
 
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
-      ctx.fill();
-    }
-  }
-
-  // Create particles
-  const numParticles = Math.min(50, Math.floor(window.innerWidth / 30));
-  for (let i = 0; i < numParticles; i++) {
-    particles.push(new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    // Draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 150) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 * (1 - dist / 150)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+    piiChartInstance = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Identified Types",
+                data: data,
+                backgroundColor: ["#ecc94b", "#4ade80", "#60a5fa", "#f87171", "#c084fc"],
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false 
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: "#9ca3af" }
+                },
+                x: {
+                    ticks: { color: "#9ca3af" }
+                }
+            }
         }
-      }
-    }
-
-    animationFrameId = requestAnimationFrame(animate);
-  }
-
-  animate();
+    });
 }

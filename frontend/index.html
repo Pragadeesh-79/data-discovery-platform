@@ -1,243 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cipher — Enterprise-wide personal data discovery and classification platform aligned with DPDPA. Scan, detect, classify, and report PII across your organization.">
-  <title>Cipher — Enterprise Personal Data Discovery & Classification</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-
-  <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-logo">
-        <div class="logo-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L3 7v6c0 5.25 3.75 10.13 9 11.25C17.25 23.13 21 18.25 21 13V7l-9-5z"/></svg></div>
-        Cipher
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="index.html" class="active">Dashboard</a>
-        <a href="lineage.html">Enterprises</a>
-        <a href="reports.html">DPDPA Compliance</a>
-        <a href="scan.html">Scanner</a>
-        <a href="reports.html">Report</a>
-      </div>
-      <div class="navbar-actions">
-        <a href="scan.html" class="btn btn-green btn-sm">Get Started <svg class="svg-icon" style="width:14px;height:14px;" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ═══ HERO ═══ -->
-  <section class="hero">
-    <!-- SVG Decorative Glow Orbs -->
-    <div class="svg-glow-orb blue" style="width:600px;height:600px;top:-200px;left:50%;transform:translateX(-50%);"></div>
-    <div class="svg-glow-orb purple" style="width:400px;height:400px;top:100px;right:-100px;"></div>
-    <div class="svg-grid-bg"></div>
-    <div class="container">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        DPDPA-Compliant Discovery
-      </div>
-
-      <h1>Discover PII <span class="white-text">with precision.</span></h1>
-
-      <p class="hero-description">
-        Automated scanning, AI-powered detection, and compliance<br>reporting to secure your enterprise data landscape.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="scan.html" class="btn btn-yellow">
-          Start Scanning 
-          <span class="icon-circle">
-            <svg class="svg-icon" style="width:14px;height:14px;" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cipher — Enterprise-wide personal data discovery and classification platform aligned with DPDPA. Scan, detect, classify, and report PII across your organization."
+    />
+    <title>Cipher — Enterprise Personal Data Discovery & Classification</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon">
+            <svg
+              class="svg-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+            >
+              <path
+                d="M12 2L3 7v6c0 5.25 3.75 10.13 9 11.25C17.25 23.13 21 18.25 21 13V7l-9-5z"
+              />
+            </svg>
+          </div>
+          Cipher
         </a>
+        <div class="navbar-links" id="navLinks">
+          <a href="index.html" class="active">Dashboard</a>
+          <a href="lineage.html">Enterprises</a>
+          <a href="reports.html">DPDPA Compliance</a>
+          <a href="scan.html">Scanner</a>
+          <a href="reports.html">Report</a>
+        </div>
+        <div class="navbar-actions">
+          <a href="scan.html" class="btn btn-green btn-sm"
+            >Get Started
+            <svg
+              class="svg-icon"
+              style="width: 14px; height: 14px"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" /></svg
+          ></a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
+    </nav>
 
-      <!-- Dashboard Preview -->
-      <div class="hero-visual">
-         <!-- Abstract colorful background shape -->
-         <div class="abstract-shape"></div>
-         
-         <!-- Glassmorphic Dashboard Window -->
-         <div class="hero-dashboard-preview">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <!-- SVG Decorative Glow Orbs -->
+      <div
+        class="svg-glow-orb blue"
+        style="
+          width: 600px;
+          height: 600px;
+          top: -200px;
+          left: 50%;
+          transform: translateX(-50%);
+        "
+      ></div>
+      <div
+        class="svg-glow-orb purple"
+        style="width: 400px; height: 400px; top: 100px; right: -100px"
+      ></div>
+      <div class="svg-grid-bg"></div>
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          DPDPA-Compliant Discovery
+        </div>
+
+        <h1>Discover PII <span class="white-text">with precision.</span></h1>
+
+        <p class="hero-description">
+          Automated scanning, AI-powered detection, and compliance<br />reporting
+          to secure your enterprise data landscape.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="scan.html" class="btn btn-yellow">
+            Start Scanning
+            <span class="icon-circle">
+              <svg
+                class="svg-icon"
+                style="width: 14px; height: 14px"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Dashboard Preview -->
+        <div class="hero-visual">
+          <!-- Abstract colorful background shape -->
+          <div class="abstract-shape"></div>
+
+          <!-- Glassmorphic Dashboard Window -->
+          <div class="hero-dashboard-preview">
             <div class="dashboard-header">
-               <span class="brand-feature">FEATURE</span>
-               <div class="dashboard-nav">
-                  <span class="nav-item active"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Dashboard</span>
-                  <span class="nav-item"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Reports</span>
-                  <span class="nav-item"><svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1h.09a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Settings</span>
-                  <span class="nav-item"><svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Help</span>
-               </div>
+              <span class="brand-feature">FEATURE</span>
+              <div class="dashboard-nav">
+                <span class="nav-item active"
+                  ><svg class="svg-icon" viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                  Dashboard</span
+                >
+                <span class="nav-item"
+                  ><svg class="svg-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg>
+                  Reports</span
+                >
+                <span class="nav-item"
+                  ><svg class="svg-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1h.09a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    />
+                  </svg>
+                  Settings</span
+                >
+                <span class="nav-item"
+                  ><svg class="svg-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                  Help</span
+                >
+              </div>
             </div>
 
             <div class="dashboard-main">
-               <div class="dashboard-stats-row">
-                  <div class="dash-card stat-card glow-left">
-                     <span class="card-label">Files Scanned</span>
-                     <div class="card-value" data-count="38000">0</div>
-                     <span class="trend up">+6%</span>
-                  </div>
-                  <div class="dash-card stat-card glow-center">
-                     <span class="card-label">PII Detected</span>
-                     <div class="card-value" data-count="850">0</div>
-                     <span class="trend up">+12%</span>
-                  </div>
-                  <div class="dash-card stat-card glow-right">
-                     <span class="card-label">Risk Alerts</span>
-                     <div class="card-value" data-count="24">0</div>
-                     <span class="trend down">-3%</span>
-                  </div>
-               </div>
-
-               <div class="dashboard-bottom-row">
-                  <div class="dash-card chart-card">
-                     <div class="card-header">
-                        <span class="card-label">Detection Trend</span>
-                        <div class="toggle-pill">
-                           <span class="toggle-opt">Last scan</span>
-                           <span class="toggle-opt active">This week</span>
-                        </div>
-                     </div>
-                     <div class="bar-chart-visual">
-                        <div class="y-axis">
-                           <span>30</span><span>20</span><span>10</span>
-                        </div>
-                        <div class="bars-container">
-                           <div class="bar gold" style="height:45%"></div>
-                           <div class="bar gold" style="height:35%"></div>
-                           <div class="bar gold" style="height:40%"></div>
-                           <div class="bar gold" style="height:60%"></div>
-                           <div class="bar gold" style="height:55%"></div>
-                           <div class="bar gold" style="height:70%"></div>
-                           <div class="bar gold" style="height:85%"></div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="dash-card list-card">
-                     <div class="card-label" style="margin-bottom:16px;">High Risk Sources</div>
-                     <div class="client-list">
-                        <div class="client-item">
-                           <div class="avatar p1"></div><span class="name">/hr/contracts.pdf</span>
-                           <div class="sparkline-placeholder"></div>
-                        </div>
-                        <div class="client-item">
-                           <div class="avatar p2"></div><span class="name">/finance/Q3.xlsx</span>
-                           <div class="sparkline-placeholder"></div>
-                        </div>
-                        <div class="client-item">
-                           <div class="avatar p3"></div><span class="name">/marketing/leads.csv</span>
-                           <div class="sparkline-placeholder"></div>
-                        </div>
-                        <div class="client-item">
-                           <div class="avatar p4"></div><span class="name">customer_db.sql</span>
-                           <div class="sparkline-placeholder"></div>
-                        </div>
-                        <div class="client-item">
-                           <div class="avatar p5"></div><span class="name">server_logs.txt</span>
-                           <div class="sparkline-placeholder"></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ INFINITE LOGO TICKER ═══ -->
-  <section class="ticker-section">
-    <div class="ticker-label">Trusted Technologies & Compliance Standards</div>
-    <div class="ticker-track">
-      <div class="ticker-item"><i class="fas fa-database"></i> MongoDB</div>
-      <div class="ticker-item"><i class="fab fa-python"></i> Python</div>
-      <div class="ticker-item"><i class="fas fa-brain"></i> spaCy NLP</div>
-      <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js</div>
-      <div class="ticker-item"><i class="fas fa-file-pdf"></i> PDF Parser</div>
-      <div class="ticker-item"><i class="fas fa-shield-halved"></i> DPDPA</div>
-      <div class="ticker-item"><i class="fas fa-code"></i> REST APIs</div>
-      <div class="ticker-item"><i class="fas fa-chart-bar"></i> Analytics</div>
-      <div class="ticker-item"><i class="fas fa-lock"></i> Encryption</div>
-      <div class="ticker-item"><i class="fas fa-robot"></i> AI Engine</div>
-      <!-- Duplicated for seamless loop -->
-      <div class="ticker-item"><i class="fas fa-database"></i> MongoDB</div>
-      <div class="ticker-item"><i class="fab fa-python"></i> Python</div>
-      <div class="ticker-item"><i class="fas fa-brain"></i> spaCy NLP</div>
-      <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js</div>
-      <div class="ticker-item"><i class="fas fa-file-pdf"></i> PDF Parser</div>
-      <div class="ticker-item"><i class="fas fa-shield-halved"></i> DPDPA</div>
-      <div class="ticker-item"><i class="fas fa-code"></i> REST APIs</div>
-      <div class="ticker-item"><i class="fas fa-chart-bar"></i> Analytics</div>
-      <div class="ticker-item"><i class="fas fa-lock"></i> Encryption</div>
-      <div class="ticker-item"><i class="fas fa-robot"></i> AI Engine</div>
-    </div>
-  </section>
-
-  <!-- ═══ BENTO FEATURES ═══ -->
-  <section id="features" class="bento-section">
-    <div class="container">
-      <div class="bento-header reveal">
-        <span class="bento-label">Core Workflow</span>
-        <h2>We make compliance seamless and<br>automated for security teams.</h2>
-      </div>
-
-      <div class="bento-grid">
-        <!-- Card 1: Registration Steps -->
-        <div class="bento-card reveal">
-          <div class="bento-content">
-            <h3>Fast, agentless local file scanning.</h3>
-            <p>Select your directories, and our engine automatically discovers hidden personal data in minutes.</p>
-          </div>
-          <div class="bento-visual steps-visual">
-            <div class="step-pill active">
-              <i class="fas fa-folder-open step-icon text-yellow"></i> Select directories
-            </div>
-            <div class="step-pill inline-margin">
-              <i class="fas fa-search step-icon text-gray"></i> Hybrid scanning
-            </div>
-            <div class="step-pill inline-margin">
-              <i class="fas fa-shield-alt step-icon text-gray"></i> View risk reports
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Customization Editor -->
-        <div class="bento-card reveal">
-          <div class="bento-content">
-            <h3>Customizable detection rules.</h3>
-            <p>Configure regex patterns and NLP severity to match your specific industry privacy needs.</p>
-          </div>
-          <div class="bento-visual editor-visual">
-            <div class="editor-panel">
-              <div class="panel-header">
-                <i class="fas fa-sliders-h text-gray"></i> Configure Scanner
-              </div>
-              <div class="panel-body">
-                <div class="prop-row">
-                  <span class="prop-label">Status</span>
-                  <div class="prop-value fill-gradient-box" style="background: linear-gradient(90deg, #10b981, #34d399);"></div>
+              <div class="dashboard-stats-row">
+                <div class="dash-card stat-card glow-left">
+                  <span class="card-label">Total PII Records</span>
+                  <div class="card-value" id="totalRecords">Loading...</div>
                 </div>
-                <div class="prop-group">
-                  <div class="prop-row">
-                    <span class="prop-label">Regex Mode</span>
-                    <div class="prop-select">Strict</div>
+                <div class="dash-card stat-card glow-center">
+                  <span class="card-label">Total Risk Score</span>
+                  <div class="card-value" id="riskScore">Loading...</div>
+                </div>
+                <div class="dash-card stat-card glow-right">
+                  <span class="card-label">Compliance Status</span>
+                  <div
+                    class="card-value"
+                    id="complianceStatus"
+                    style="font-size: 1.2rem; padding-top: 10px"
+                  >
+                    Loading...
                   </div>
-                  <div class="prop-row">
-                    <span class="prop-label">NLP Model</span>
-                    <div class="prop-select">en_core</div>
+                </div>
+              </div>
+
+              <div class="dashboard-bottom-row">
+                <div class="dash-card chart-card">
+                  <div class="card-header">
+                    <span class="card-label">PII Type Distribution</span>
                   </div>
-                  <div class="prop-row">
-                    <span class="prop-label">Actions</span>
-                    <div class="style-toggles">
-                      <span class="toggle-btn active" style="font-weight:normal;">Mask</span>
-                      <span class="toggle-btn" style="font-style:normal;">Flag</span>
-                      <span class="toggle-btn" style="text-decoration:none;">Drop</span>
+                  <div
+                    class="bar-chart-visual"
+                    style="
+                      height: 200px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <!-- Chart.js Canvas integration -->
+                    <canvas
+                      id="piiChart"
+                      style="max-height: 100%; max-width: 100%"
+                    ></canvas>
+                  </div>
+                </div>
+
+                <div class="dash-card list-card">
+                  <div class="card-label" style="margin-bottom: 16px">
+                    High Risk Sources
+                  </div>
+                  <div class="client-list">
+                    <div class="client-item">
+                      <div class="avatar p1"></div>
+                      <span class="name">/hr/contracts.pdf</span>
+                      <div class="sparkline-placeholder"></div>
+                    </div>
+                    <div class="client-item">
+                      <div class="avatar p2"></div>
+                      <span class="name">/finance/Q3.xlsx</span>
+                      <div class="sparkline-placeholder"></div>
+                    </div>
+                    <div class="client-item">
+                      <div class="avatar p3"></div>
+                      <span class="name">/marketing/leads.csv</span>
+                      <div class="sparkline-placeholder"></div>
+                    </div>
+                    <div class="client-item">
+                      <div class="avatar p4"></div>
+                      <span class="name">customer_db.sql</span>
+                      <div class="sparkline-placeholder"></div>
+                    </div>
+                    <div class="client-item">
+                      <div class="avatar p5"></div>
+                      <span class="name">server_logs.txt</span>
+                      <div class="sparkline-placeholder"></div>
                     </div>
                   </div>
                 </div>
@@ -245,66 +235,222 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Card 3: Support Chat -->
-        <div class="bento-card reveal">
-          <div class="bento-content">
-            <h3>Real-time AI analysis context.</h3>
-            <p>Advanced spaCy NLP detects names, locations, and organizations that standard regex misses.</p>
+    <!-- ═══ INFINITE LOGO TICKER ═══ -->
+    <section class="ticker-section">
+      <div class="ticker-label">
+        Trusted Technologies & Compliance Standards
+      </div>
+      <div class="ticker-track">
+        <div class="ticker-item"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="ticker-item"><i class="fab fa-python"></i> Python</div>
+        <div class="ticker-item"><i class="fas fa-brain"></i> spaCy NLP</div>
+        <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="ticker-item">
+          <i class="fas fa-file-pdf"></i> PDF Parser
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-shield-halved"></i> DPDPA
+        </div>
+        <div class="ticker-item"><i class="fas fa-code"></i> REST APIs</div>
+        <div class="ticker-item">
+          <i class="fas fa-chart-bar"></i> Analytics
+        </div>
+        <div class="ticker-item"><i class="fas fa-lock"></i> Encryption</div>
+        <div class="ticker-item"><i class="fas fa-robot"></i> AI Engine</div>
+        <!-- Duplicated for seamless loop -->
+        <div class="ticker-item"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="ticker-item"><i class="fab fa-python"></i> Python</div>
+        <div class="ticker-item"><i class="fas fa-brain"></i> spaCy NLP</div>
+        <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="ticker-item">
+          <i class="fas fa-file-pdf"></i> PDF Parser
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-shield-halved"></i> DPDPA
+        </div>
+        <div class="ticker-item"><i class="fas fa-code"></i> REST APIs</div>
+        <div class="ticker-item">
+          <i class="fas fa-chart-bar"></i> Analytics
+        </div>
+        <div class="ticker-item"><i class="fas fa-lock"></i> Encryption</div>
+        <div class="ticker-item"><i class="fas fa-robot"></i> AI Engine</div>
+      </div>
+    </section>
+
+    <!-- ═══ BENTO FEATURES ═══ -->
+    <section id="features" class="bento-section">
+      <div class="container">
+        <div class="bento-header reveal">
+          <span class="bento-label">Core Workflow</span>
+          <h2>
+            We make compliance seamless and<br />automated for security teams.
+          </h2>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Registration Steps -->
+          <div class="bento-card reveal">
+            <div class="bento-content">
+              <h3>Fast, agentless local file scanning.</h3>
+              <p>
+                Select your directories, and our engine automatically discovers
+                hidden personal data in minutes.
+              </p>
+            </div>
+            <div class="bento-visual steps-visual">
+              <div class="step-pill active">
+                <i class="fas fa-folder-open step-icon text-yellow"></i> Select
+                directories
+              </div>
+              <div class="step-pill inline-margin">
+                <i class="fas fa-search step-icon text-gray"></i> Hybrid
+                scanning
+              </div>
+              <div class="step-pill inline-margin">
+                <i class="fas fa-shield-alt step-icon text-gray"></i> View risk
+                reports
+              </div>
+            </div>
           </div>
-          <div class="bento-visual chat-visual">
-            <div class="chat-container">
-              <div class="chat-bubble user">
-                <div class="avatar user-av"></div>
-                <div class="bubble-text">Found: "Rahul sent 500 INR to Mumbai branch."</div>
+
+          <!-- Card 2: Customization Editor -->
+          <div class="bento-card reveal">
+            <div class="bento-content">
+              <h3>Customizable detection rules.</h3>
+              <p>
+                Configure regex patterns and NLP severity to match your specific
+                industry privacy needs.
+              </p>
+            </div>
+            <div class="bento-visual editor-visual">
+              <div class="editor-panel">
+                <div class="panel-header">
+                  <i class="fas fa-sliders-h text-gray"></i> Configure Scanner
+                </div>
+                <div class="panel-body">
+                  <div class="prop-row">
+                    <span class="prop-label">Status</span>
+                    <div
+                      class="prop-value fill-gradient-box"
+                      style="
+                        background: linear-gradient(90deg, #10b981, #34d399);
+                      "
+                    ></div>
+                  </div>
+                  <div class="prop-group">
+                    <div class="prop-row">
+                      <span class="prop-label">Regex Mode</span>
+                      <div class="prop-select">Strict</div>
+                    </div>
+                    <div class="prop-row">
+                      <span class="prop-label">NLP Model</span>
+                      <div class="prop-select">en_core</div>
+                    </div>
+                    <div class="prop-row">
+                      <span class="prop-label">Actions</span>
+                      <div class="style-toggles">
+                        <span
+                          class="toggle-btn active"
+                          style="font-weight: normal"
+                          >Mask</span
+                        >
+                        <span class="toggle-btn" style="font-style: normal"
+                          >Flag</span
+                        >
+                        <span class="toggle-btn" style="text-decoration: none"
+                          >Drop</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="chat-bubble agent">
-                <div class="bubble-text">Detected Entities:<br>[Rahul - PERSON]<br>[Mumbai - LOCATION]</div>
-                <div class="avatar agent-av"><div class="agent-dot"></div></div>
-              </div>
-              <div class="chat-input-mock">
-                <div class="avatar user-av small"></div>
-                <div class="input-line">Classify as High Risk Context</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Support Chat -->
+          <div class="bento-card reveal">
+            <div class="bento-content">
+              <h3>Real-time AI analysis context.</h3>
+              <p>
+                Advanced spaCy NLP detects names, locations, and organizations
+                that standard regex misses.
+              </p>
+            </div>
+            <div class="bento-visual chat-visual">
+              <div class="chat-container">
+                <div class="chat-bubble user">
+                  <div class="avatar user-av"></div>
+                  <div class="bubble-text">
+                    Found: "Rahul sent 500 INR to Mumbai branch."
+                  </div>
+                </div>
+                <div class="chat-bubble agent">
+                  <div class="bubble-text">
+                    Detected Entities:<br />[Rahul - PERSON]<br />[Mumbai -
+                    LOCATION]
+                  </div>
+                  <div class="avatar agent-av">
+                    <div class="agent-dot"></div>
+                  </div>
+                </div>
+                <div class="chat-input-mock">
+                  <div class="avatar user-av small"></div>
+                  <div class="input-line">Classify as High Risk Context</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ ANIMATED DATA FLOW ═══ -->
-  <section id="data-flow" class="data-flow-section">
-    <div class="container">
-      <div class="data-flow-wrapper reveal">
-        
-        <!-- Sources Column -->
-        <div class="flow-col flow-sources">
-          <div class="flow-node source-node"><i class="fas fa-desktop"></i></div>
-          <div class="flow-node source-node"><i class="fas fa-mobile-alt"></i></div>
-          <div class="flow-node source-node"><i class="fas fa-server"></i></div>
-          <div class="flow-node source-node"><i class="fas fa-tv"></i></div>
-          <div class="flow-node source-node"><i class="fas fa-tablet-alt"></i></div>
-          <div class="flow-node source-node"><i class="fas fa-hdd"></i></div>
-        </div>
+    <!-- ═══ ANIMATED DATA FLOW ═══ -->
+    <section id="data-flow" class="data-flow-section">
+      <div class="container">
+        <div class="data-flow-wrapper reveal">
+          <!-- Sources Column -->
+          <div class="flow-col flow-sources">
+            <div class="flow-node source-node">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div class="flow-node source-node">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="flow-node source-node">
+              <i class="fas fa-server"></i>
+            </div>
+            <div class="flow-node source-node"><i class="fas fa-tv"></i></div>
+            <div class="flow-node source-node">
+              <i class="fas fa-tablet-alt"></i>
+            </div>
+            <div class="flow-node source-node"><i class="fas fa-hdd"></i></div>
+          </div>
 
-        <!-- SVG Lines Left -->
-        <div class="flow-lines-left">
-           <svg preserveAspectRatio="none" viewBox="0 0 100 300" class="flow-svg">
+          <!-- SVG Lines Left -->
+          <div class="flow-lines-left">
+            <svg
+              preserveAspectRatio="none"
+              viewBox="0 0 100 300"
+              class="flow-svg"
+            >
               <path class="animated-line" d="M0,25 L80,25 L80,150 L100,150" />
               <path class="animated-line" d="M0,75 L60,75 L60,150 L100,150" />
               <path class="animated-line" d="M0,125 L40,125 L40,150 L100,150" />
               <path class="animated-line" d="M0,175 L40,175 L40,150 L100,150" />
               <path class="animated-line" d="M0,225 L60,225 L60,150 L100,150" />
               <path class="animated-line" d="M0,275 L80,275 L80,150 L100,150" />
-           </svg>
-        </div>
+            </svg>
+          </div>
 
-        <!-- Center Engine Box -->
-        <div class="flow-col flow-engine-col">
-          <div class="engine-box">
-             <div class="engine-glow"></div>
-             <pre><code>{
+          <!-- Center Engine Box -->
+          <div class="flow-col flow-engine-col">
+            <div class="engine-box">
+              <div class="engine-glow"></div>
+              <pre><code>{
   <span class="json-key">"data"</span>: {
     <span class="json-key">"cities"</span>: [
       {
@@ -317,309 +463,487 @@
     ]
   }
 }</code></pre>
+            </div>
           </div>
-        </div>
 
-        <!-- SVG Lines Right -->
-        <div class="flow-lines-right">
-           <svg preserveAspectRatio="none" viewBox="0 0 100 250" class="flow-svg">
-              <path class="animated-line pink-glow" d="M0,125 L40,125 L40,25 L100,25" />
-              <path class="animated-line dim-line" d="M0,125 L60,125 L60,75 L100,75" />
-              <path class="animated-line dim-line" d="M0,125 L80,125 L80,125 L100,125" />
-              <path class="animated-line green-glow" d="M0,125 L60,125 L60,175 L100,175" />
-              <path class="animated-line dim-line" d="M0,125 L40,125 L40,225 L100,225" />
-           </svg>
-        </div>
-
-        <!-- Destinations Column -->
-        <div class="flow-col flow-destinations">
-          <div class="flow-node dest-node highlight-pink"><i class="fas fa-database"></i></div>
-          <div class="flow-node dest-node"><i class="fas fa-server"></i></div>
-          <div class="flow-node dest-node"><i class="fas fa-hdd"></i></div>
-          <div class="flow-node dest-node highlight-green"><i class="fas fa-cloud"></i></div>
-          <div class="flow-node dest-node"><i class="fas fa-network-wired"></i></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Live Detection section removed per user request -->
-  
-
-  <!-- ═══ AI / NLP SECTION ═══ -->
-  <section id="ai-nlp" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">AI-Powered</span>
-        <h2>More Powerful With<br><span class="gradient-text">NLP Detection</span></h2>
-        <p class="section-subtitle">Beyond regex — our AI engine uses Named Entity Recognition to identify contextual personal information.</p>
-      </div>
-
-      <div class="ai-demo reveal">
-        <div class="ai-input-box">
-          <h4 style="margin-bottom:16px;display:flex;align-items:center;gap:8px;"><i class="fas fa-file-lines" style="color:var(--accent-blue)"></i> Input Document</h4>
-          <div class="code-block">
-            <span class="code-comment">// Sample text from scanned document</span><br><br>
-            <span class="code-string">"<span class="code-entity">Rahul Sharma</span> lives in <span class="code-entity">Chennai</span> and works at<br>
-            <span class="code-entity">TechCorp India Pvt Ltd</span>. His Aadhaar number is<br>
-            <span class="code-entity">1234-5678-9012</span> and PAN is <span class="code-entity">ABCPK1234K</span>.<br>
-            Contact: <span class="code-entity">+91-98765-43210</span>"</span>
+          <!-- SVG Lines Right -->
+          <div class="flow-lines-right">
+            <svg
+              preserveAspectRatio="none"
+              viewBox="0 0 100 250"
+              class="flow-svg"
+            >
+              <path
+                class="animated-line pink-glow"
+                d="M0,125 L40,125 L40,25 L100,25"
+              />
+              <path
+                class="animated-line dim-line"
+                d="M0,125 L60,125 L60,75 L100,75"
+              />
+              <path
+                class="animated-line dim-line"
+                d="M0,125 L80,125 L80,125 L100,125"
+              />
+              <path
+                class="animated-line green-glow"
+                d="M0,125 L60,125 L60,175 L100,175"
+              />
+              <path
+                class="animated-line dim-line"
+                d="M0,125 L40,125 L40,225 L100,225"
+              />
+            </svg>
           </div>
-        </div>
 
-        <div class="ai-output-box">
-          <h4 style="margin-bottom:16px;display:flex;align-items:center;gap:8px;"><i class="fas fa-brain" style="color:var(--accent-purple)"></i> AI Detection Output</h4>
-          <div class="code-block">
-            <span class="code-comment">// NER + Regex Results</span><br><br>
-            <span class="code-keyword">Person</span> → <span class="code-string">"Rahul Sharma"</span><br>
-            <span class="code-keyword">Location</span> → <span class="code-string">"Chennai"</span><br>
-            <span class="code-keyword">Organization</span> → <span class="code-string">"TechCorp India Pvt Ltd"</span><br>
-            <span class="code-label">Aadhaar</span> → <span class="code-string">"1234-5678-9012"</span><br>
-            <span class="code-label">PAN</span> → <span class="code-string">"ABCPK1234K"</span><br>
-            <span class="code-label">Phone</span> → <span class="code-string">"+91-98765-43210"</span>
-          </div>
-          <div class="entity-tags">
-            <span class="entity-tag person" style="animation-delay:0.1s"><i class="fas fa-user"></i> Rahul Sharma</span>
-            <span class="entity-tag location" style="animation-delay:0.2s"><i class="fas fa-map-pin"></i> Chennai</span>
-            <span class="entity-tag org" style="animation-delay:0.3s"><i class="fas fa-building"></i> TechCorp India</span>
-            <span class="entity-tag person" style="animation-delay:0.4s"><i class="fas fa-id-card"></i> Aadhaar</span>
-            <span class="entity-tag org" style="animation-delay:0.5s"><i class="fas fa-credit-card"></i> PAN</span>
+          <!-- Destinations Column -->
+          <div class="flow-col flow-destinations">
+            <div class="flow-node dest-node highlight-pink">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="flow-node dest-node"><i class="fas fa-server"></i></div>
+            <div class="flow-node dest-node"><i class="fas fa-hdd"></i></div>
+            <div class="flow-node dest-node highlight-green">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="flow-node dest-node">
+              <i class="fas fa-network-wired"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ TESTIMONIALS / REVIEWS CAROUSEL ═══ -->
-  <section style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Recognition</span>
-        <h2>What Makes <span class="gradient-text">Cipher</span> Stand Out</h2>
-      </div>
-    </div>
-    <div class="testimonials-carousel">
-      <div class="testimonials-track">
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">GK</div>
-            <div>
-              <div class="testimonial-name">Gireesh K</div>
-              <div class="testimonial-role">Scanner Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The scanner engine processes hundreds of files in seconds. PDF, CSV, Excel, DOCX — all parsed seamlessly with accurate PII detection using regex patterns."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">RK</div>
-            <div>
-              <div class="testimonial-name">Rishikumar</div>
-              <div class="testimonial-role">Backend Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"REST APIs powering the inventory system. MongoDB stores every detected PII record with full metadata — type, location, owner, sensitivity level."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">PD</div>
-            <div>
-              <div class="testimonial-name">Pragadeesh</div>
-              <div class="testimonial-role">AI/NLP Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"spaCy's NER model detects contextual entities that regex can't catch. Person names, locations, organizations — all classified with high accuracy."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">MK</div>
-            <div>
-              <div class="testimonial-name">Manikandan</div>
-              <div class="testimonial-role">Frontend & Design</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The dashboard visualizations make complex PII data instantly understandable. Charts, risk indicators, and compliance reports — all in one premium interface."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">DP</div>
-            <div>
-              <div class="testimonial-name">DPDPA Compliance</div>
-              <div class="testimonial-role">Regulatory Standard</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Full alignment with India's Digital Personal Data Protection Act. Automated audit trails, consent management, and data principal rights enforcement."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">AI</div>
-            <div>
-              <div class="testimonial-name">AI Classification</div>
-              <div class="testimonial-role">Smart Categorization</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Automatic tagging into Identifier, Personal, and Financial categories. Risk scoring helps prioritize remediation efforts across departments."</p>
-        </div>
-        <!-- Duplicated for seamless loop -->
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">GK</div>
-            <div>
-              <div class="testimonial-name">Gireesh K</div>
-              <div class="testimonial-role">Scanner Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The scanner engine processes hundreds of files in seconds. PDF, CSV, Excel, DOCX — all parsed seamlessly with accurate PII detection using regex patterns."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">RK</div>
-            <div>
-              <div class="testimonial-name">Rishikumar</div>
-              <div class="testimonial-role">Backend Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"REST APIs powering the inventory system. MongoDB stores every detected PII record with full metadata — type, location, owner, sensitivity level."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">PD</div>
-            <div>
-              <div class="testimonial-name">Pragadeesh</div>
-              <div class="testimonial-role">AI/NLP Engineer</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"spaCy's NER model detects contextual entities that regex can't catch. Person names, locations, organizations — all classified with high accuracy."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">MK</div>
-            <div>
-              <div class="testimonial-name">Manikandan</div>
-              <div class="testimonial-role">Frontend & Design</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The dashboard visualizations make complex PII data instantly understandable. Charts, risk indicators, and compliance reports — all in one premium interface."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">DP</div>
-            <div>
-              <div class="testimonial-name">DPDPA Compliance</div>
-              <div class="testimonial-role">Regulatory Standard</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Full alignment with India's Digital Personal Data Protection Act. Automated audit trails, consent management, and data principal rights enforcement."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">AI</div>
-            <div>
-              <div class="testimonial-name">AI Classification</div>
-              <div class="testimonial-role">Smart Categorization</div>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Automatic tagging into Identifier, Personal, and Financial categories. Risk scoring helps prioritize remediation efforts across departments."</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Live Detection section removed per user request -->
 
-  <!-- ═══ CTA SECTION ═══ -->
-  <section class="cta-section" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="cta-box reveal">
-        <span class="section-label">Get Started</span>
-        <h2>Take the First Step Toward<br><span class="gradient-text">Data Compliance</span></h2>
-        <p>Discover personal data across your enterprise. Classify, protect, and comply with DPDPA — all from one platform.</p>
-        <div class="hero-buttons">
-          <a href="scan.html" class="btn btn-green btn-lg">Start Scanning Now <svg class="svg-icon" style="width:14px;height:14px;" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="reports.html" class="btn btn-secondary btn-lg">View Reports <svg class="svg-icon" style="width:14px;height:14px;" viewBox="0 0 24 24" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+    <!-- ═══ AI / NLP SECTION ═══ -->
+    <section id="ai-nlp" style="background: var(--bg-secondary)">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">AI-Powered</span>
+          <h2>
+            More Powerful With<br /><span class="gradient-text"
+              >NLP Detection</span
+            >
+          </h2>
+          <p class="section-subtitle">
+            Beyond regex — our AI engine uses Named Entity Recognition to
+            identify contextual personal information.
+          </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══ MASSIVE FOOTER ═══ -->
-  <footer class="footer-massive">
-    <div class="container container-massive">
-      <div class="footer-massive-grid">
-        <div class="footer-col">
-          <h4>Products</h4>
-          <a href="#">Cipher Platform</a>
-          <a href="#">Cipher Observability</a>
-          <a href="#">Cipher Evaluation</a>
-          <a href="#">Cipher Deployment</a>
-          <a href="#">Cipher Agent Builder</a>
-          <a href="#">Deep Agents</a>
-          <a href="#">CipherGraph</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="#">Blog</a>
-          <a href="#">Customer Stories</a>
-          <a href="#">Guides</a>
-          <a href="#">Cipher Academy</a>
-          <a href="#">Community</a>
-          <a href="#">Events</a>
-          <a href="#">Changelog</a>
-          <a href="#">Docs</a>
-          <a href="#">Support</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="#">Careers</a>
-          <a href="#">Partners</a>
-          <a href="#">Trust Center</a>
-          <a href="#">Marketing assets</a>
-        </div>
-        <div class="footer-newsletter">
-          <h4>Sign up for our newsletter to<br>stay up to date</h4>
-          <div class="newsletter-form">
-            <input type="email" placeholder="Your email">
-            <button type="submit" class="btn-subscribe">Subscribe</button>
+        <div class="ai-demo reveal">
+          <div class="ai-input-box">
+            <h4
+              style="
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <i
+                class="fas fa-file-lines"
+                style="color: var(--accent-blue)"
+              ></i>
+              Input Document
+            </h4>
+            <div class="code-block">
+              <span class="code-comment"
+                >// Sample text from scanned document</span
+              ><br /><br />
+              <span class="code-string"
+                >"<span class="code-entity">Rahul Sharma</span> lives in
+                <span class="code-entity">Chennai</span> and works at<br />
+                <span class="code-entity">TechCorp India Pvt Ltd</span>. His
+                Aadhaar number is<br />
+                <span class="code-entity">1234-5678-9012</span> and PAN is
+                <span class="code-entity">ABCPK1234K</span>.<br />
+                Contact: <span class="code-entity">+91-98765-43210</span>"</span
+              >
+            </div>
           </div>
-          <div class="footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+          <div class="ai-output-box">
+            <h4
+              style="
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <i class="fas fa-brain" style="color: var(--accent-purple)"></i>
+              AI Detection Output
+            </h4>
+            <div class="code-block">
+              <span class="code-comment">// NER + Regex Results</span
+              ><br /><br />
+              <span class="code-keyword">Person</span> →
+              <span class="code-string">"Rahul Sharma"</span><br />
+              <span class="code-keyword">Location</span> →
+              <span class="code-string">"Chennai"</span><br />
+              <span class="code-keyword">Organization</span> →
+              <span class="code-string">"TechCorp India Pvt Ltd"</span><br />
+              <span class="code-label">Aadhaar</span> →
+              <span class="code-string">"1234-5678-9012"</span><br />
+              <span class="code-label">PAN</span> →
+              <span class="code-string">"ABCPK1234K"</span><br />
+              <span class="code-label">Phone</span> →
+              <span class="code-string">"+91-98765-43210"</span>
+            </div>
+            <div class="entity-tags">
+              <span class="entity-tag person" style="animation-delay: 0.1s"
+                ><i class="fas fa-user"></i> Rahul Sharma</span
+              >
+              <span class="entity-tag location" style="animation-delay: 0.2s"
+                ><i class="fas fa-map-pin"></i> Chennai</span
+              >
+              <span class="entity-tag org" style="animation-delay: 0.3s"
+                ><i class="fas fa-building"></i> TechCorp India</span
+              >
+              <span class="entity-tag person" style="animation-delay: 0.4s"
+                ><i class="fas fa-id-card"></i> Aadhaar</span
+              >
+              <span class="entity-tag org" style="animation-delay: 0.5s"
+                ><i class="fas fa-credit-card"></i> PAN</span
+              >
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="footer-massive-logo-wrapper">
-        <div class="footer-massive-logo">
-          <div class="logo-icon-massive"><svg viewBox="0 0 24 24" fill="none" class="svg-logo"><path d="M12 2L3 7v6c0 5.25 3.75 10.13 9 11.25C17.25 23.13 21 18.25 21 13V7l-9-5z" fill="#93c5fd"/></svg></div>
-          <span class="logo-text-massive">Cipher</span>
+    </section>
+
+    <!-- ═══ TESTIMONIALS / REVIEWS CAROUSEL ═══ -->
+    <section style="background: var(--bg-secondary)">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Recognition</span>
+          <h2>
+            What Makes <span class="gradient-text">Cipher</span> Stand Out
+          </h2>
         </div>
       </div>
-
-      <div class="footer-massive-bottom">
-        <div class="status-indicator">
-          <span class="live-pulse-dot" style="margin-right: 6px; width: 6px; height: 6px;"></span> All systems operational
-        </div>
-        <div class="legal-links">
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of service</a>
+      <div class="testimonials-carousel">
+        <div class="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">GK</div>
+              <div>
+                <div class="testimonial-name">Gireesh K</div>
+                <div class="testimonial-role">Scanner Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The scanner engine processes hundreds of files in seconds. PDF,
+              CSV, Excel, DOCX — all parsed seamlessly with accurate PII
+              detection using regex patterns."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">RK</div>
+              <div>
+                <div class="testimonial-name">Rishikumar</div>
+                <div class="testimonial-role">Backend Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "REST APIs powering the inventory system. MongoDB stores every
+              detected PII record with full metadata — type, location, owner,
+              sensitivity level."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">PD</div>
+              <div>
+                <div class="testimonial-name">Pragadeesh</div>
+                <div class="testimonial-role">AI/NLP Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "spaCy's NER model detects contextual entities that regex can't
+              catch. Person names, locations, organizations — all classified
+              with high accuracy."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">MK</div>
+              <div>
+                <div class="testimonial-name">Manikandan</div>
+                <div class="testimonial-role">Frontend & Design</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The dashboard visualizations make complex PII data instantly
+              understandable. Charts, risk indicators, and compliance reports —
+              all in one premium interface."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">DP</div>
+              <div>
+                <div class="testimonial-name">DPDPA Compliance</div>
+                <div class="testimonial-role">Regulatory Standard</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Full alignment with India's Digital Personal Data Protection Act.
+              Automated audit trails, consent management, and data principal
+              rights enforcement."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AI</div>
+              <div>
+                <div class="testimonial-name">AI Classification</div>
+                <div class="testimonial-role">Smart Categorization</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Automatic tagging into Identifier, Personal, and Financial
+              categories. Risk scoring helps prioritize remediation efforts
+              across departments."
+            </p>
+          </div>
+          <!-- Duplicated for seamless loop -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">GK</div>
+              <div>
+                <div class="testimonial-name">Gireesh K</div>
+                <div class="testimonial-role">Scanner Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The scanner engine processes hundreds of files in seconds. PDF,
+              CSV, Excel, DOCX — all parsed seamlessly with accurate PII
+              detection using regex patterns."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">RK</div>
+              <div>
+                <div class="testimonial-name">Rishikumar</div>
+                <div class="testimonial-role">Backend Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "REST APIs powering the inventory system. MongoDB stores every
+              detected PII record with full metadata — type, location, owner,
+              sensitivity level."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">PD</div>
+              <div>
+                <div class="testimonial-name">Pragadeesh</div>
+                <div class="testimonial-role">AI/NLP Engineer</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "spaCy's NER model detects contextual entities that regex can't
+              catch. Person names, locations, organizations — all classified
+              with high accuracy."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">MK</div>
+              <div>
+                <div class="testimonial-name">Manikandan</div>
+                <div class="testimonial-role">Frontend & Design</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The dashboard visualizations make complex PII data instantly
+              understandable. Charts, risk indicators, and compliance reports —
+              all in one premium interface."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">DP</div>
+              <div>
+                <div class="testimonial-name">DPDPA Compliance</div>
+                <div class="testimonial-role">Regulatory Standard</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Full alignment with India's Digital Personal Data Protection Act.
+              Automated audit trails, consent management, and data principal
+              rights enforcement."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AI</div>
+              <div>
+                <div class="testimonial-name">AI Classification</div>
+                <div class="testimonial-role">Smart Categorization</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Automatic tagging into Identifier, Personal, and Financial
+              categories. Risk scoring helps prioritize remediation efforts
+              across departments."
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="js/dashboard.js"></script>
-</body>
+    <!-- ═══ CTA SECTION ═══ -->
+    <section class="cta-section" style="background: var(--bg-secondary)">
+      <div class="container">
+        <div class="cta-box reveal">
+          <span class="section-label">Get Started</span>
+          <h2>
+            Take the First Step Toward<br /><span class="gradient-text"
+              >Data Compliance</span
+            >
+          </h2>
+          <p>
+            Discover personal data across your enterprise. Classify, protect,
+            and comply with DPDPA — all from one platform.
+          </p>
+          <div class="hero-buttons">
+            <a href="scan.html" class="btn btn-green btn-lg"
+              >Start Scanning Now
+              <svg
+                class="svg-icon"
+                style="width: 14px; height: 14px"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
+            <a href="reports.html" class="btn btn-secondary btn-lg"
+              >View Reports
+              <svg
+                class="svg-icon"
+                style="width: 14px; height: 14px"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"
+                />
+                <polyline points="14 2 14 8 20 8" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MASSIVE FOOTER ═══ -->
+    <footer class="footer-massive">
+      <div class="container container-massive">
+        <div class="footer-massive-grid">
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="#">Cipher Platform</a>
+            <a href="#">Cipher Observability</a>
+            <a href="#">Cipher Evaluation</a>
+            <a href="#">Cipher Deployment</a>
+            <a href="#">Cipher Agent Builder</a>
+            <a href="#">Deep Agents</a>
+            <a href="#">CipherGraph</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#">Blog</a>
+            <a href="#">Customer Stories</a>
+            <a href="#">Guides</a>
+            <a href="#">Cipher Academy</a>
+            <a href="#">Community</a>
+            <a href="#">Events</a>
+            <a href="#">Changelog</a>
+            <a href="#">Docs</a>
+            <a href="#">Support</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Partners</a>
+            <a href="#">Trust Center</a>
+            <a href="#">Marketing assets</a>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Sign up for our newsletter to<br />stay up to date</h4>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email" />
+              <button type="submit" class="btn-subscribe">Subscribe</button>
+            </div>
+            <div class="footer-socials">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-massive-logo-wrapper">
+          <div class="footer-massive-logo">
+            <div class="logo-icon-massive">
+              <svg viewBox="0 0 24 24" fill="none" class="svg-logo">
+                <path
+                  d="M12 2L3 7v6c0 5.25 3.75 10.13 9 11.25C17.25 23.13 21 18.25 21 13V7l-9-5z"
+                  fill="#93c5fd"
+                />
+              </svg>
+            </div>
+            <span class="logo-text-massive">Cipher</span>
+          </div>
+        </div>
+
+        <div class="footer-massive-bottom">
+          <div class="status-indicator">
+            <span
+              class="live-pulse-dot"
+              style="margin-right: 6px; width: 6px; height: 6px"
+            ></span>
+            All systems operational
+          </div>
+          <div class="legal-links">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script Includes -->
+    <!-- 1. Chart.js CDN (required for our PII chart) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 2. Custom Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
 </html>

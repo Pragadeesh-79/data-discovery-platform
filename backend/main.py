@@ -13,9 +13,23 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+# 1. Import models so SQLAlchemy knows they exist before creating tables!
+import models.pii_model
+
+# 2. Import SQLite Base and engine to create tables automatically
+from database.sqlite_db import Base, engine
+
+# Create the tables in the database (if they don't already exist)
+Base.metadata.create_all(bind=engine)
+
 # Import our scan routes router from the api module
 from api.scan_routes import router as scan_router
-from api.dashboard_routes import router as dashboard_router
+# Depending on your latest codebase struct if dashboard routes are separate, you can optionally include them as well
+try:
+    from api.dashboard_routes import router as dashboard_router
+    has_dashboard = True
+except ImportError:
+    has_dashboard = False
 
 # Initialize the FastAPI app
 # Title and version will appear in the automatically generated Swagger UI API documentation
@@ -44,7 +58,8 @@ app.add_middleware(
 
 # Include all routes defined in api/scan_routes.py
 app.include_router(scan_router)
-app.include_router(dashboard_router)
+if has_dashboard:
+    app.include_router(dashboard_router)
 
 # ---------------------------------------------------------
 # API Endpoints

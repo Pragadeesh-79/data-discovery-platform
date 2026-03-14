@@ -1,7 +1,9 @@
 fastapi
 uvicorn
-pymongo
 pydantic
+sqlalchemy
+aiosqlite
+pymongo
 certifi
 cryptography
 spacy

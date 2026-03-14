@@ -1,62 +1,58 @@
-const BASE_URL = "http://127.0.0.1:8000";
+// frontend/js/api.js
 
-async function fetchFromAPI(endpoint, options = {}) {
+const API_BASE_URL = "http://localhost:8000";
+
+/**
+ * Fetches the aggregated dashboard statistics from the backend.
+ * @returns {Promise<Object>} Dashboard data (total records, risk score, PII types, etc.)
+ */
+async function getDashboardStats() {
     try {
-        const response = await fetch(`${BASE_URL}${endpoint}`, options);
+        const response = await fetch(`${API_BASE_URL}/dashboard-stats`);
         if (!response.ok) {
-            throw new Error(`API call failed: ${response.statusText}`);
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return await response.json();
     } catch (error) {
-        console.error(`Backend connection error: ${error.message}`);
-        // Do not crash UI
-        return { error: "Backend connection error" };
+        console.error("Error fetching dashboard stats:", error);
+        return null;
     }
 }
 
-async function scanLocalFolder() {
-    return await fetchFromAPI("/scan/local");
-}
-
-async function fetchRiskScore() {
-    return await fetchFromAPI("/risk");
-}
-
-async function fetchReports() {
-    return await fetchFromAPI("/reports");
-}
-
-async function fetchHeatmap() {
-    return await fetchFromAPI("/reports/heatmap");
-}
-
-async function fetchLineage() {
-    return await fetchFromAPI("/lineage");
-}
-
-async function uploadAndScanFile(file) {
-    const formData = new FormData();
-    formData.append("file", file);
-
+/**
+ * Fetches the inventory of detected PII records.
+ * @returns {Promise<Object>} List of PII records.
+ */
+async function getInventory() {
     try {
-        const response = await fetch(`${BASE_URL}/scan/upload`, {
+        const response = await fetch(`${API_BASE_URL}/inventory`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching inventory:", error);
+        return null;
+    }
+}
+
+/**
+ * Submits a new scan result to the backend.
+ * @param {Object} record - The PII record to save.
+ */
+async function submitScanResult(record) {
+    try {
+        const response = await fetch(`${API_BASE_URL}/scan-results`, {
             method: "POST",
-            body: formData,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(record)
         });
         if (!response.ok) {
-            throw new Error(`API call failed: ${response.statusText}`);
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return await response.json();
     } catch (error) {
-        console.error(`Backend connection error: ${error.message}`);
-        return { error: "Backend connection error" };
+        console.error("Error submitting scan result:", error);
+        return null;
     }
 }
-
-// Global exposure for HTML inline calls
-window.scanLocalFolder = scanLocalFolder;
-window.uploadAndScanFile = uploadAndScanFile;
-window.fetchRiskScore = fetchRiskScore;
-window.fetchReports = fetchReports;
-window.fetchHeatmap = fetchHeatmap;
-window.fetchLineage = fetchLineage;
