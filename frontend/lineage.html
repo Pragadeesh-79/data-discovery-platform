@@ -22,7 +22,6 @@
         <a href="lineage.html" class="active">Enterprises</a>
         <a href="reports.html">DPDPA Compliance</a>
         <a href="scan.html">Scanner</a>
-        <a href="reports.html">Report</a>
       </div>
       <div class="navbar-actions">
         <a href="scan.html" class="btn btn-primary btn-sm">Get Started <i class="fas fa-arrow-right"></i></a>
@@ -35,248 +34,185 @@
   <section class="scanner-page">
     <div class="container">
       <!-- Enterprise Dataset Dashboard UI -->
-      <div class="coinbase-dashboard reveal">
-        <div class="cb-header">
-          <div class="cb-header-left">
-            <h2>Explore Enterprise Data</h2>
-            <p>In the past 24 hours discovered PII is up <span class="cb-green-text">↗ 3.38%</span></p>
+      <!-- Enterprise Dataset Dashboard UI (Phase 8 Crypto Map) -->
+      <div class="crypto-dashboard reveal">
+        <div class="crypto-header">
+          <div class="crypto-header-left">
+            <h2>Data Overview</h2>
+            <p>Mapped to GET /dashboard-stats · Last update: 2 min ago</p>
           </div>
-          <div class="cb-search-bar">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search for a data asset">
+          <div class="crypto-header-right">
+            <button class="crypto-btn"><i class="fas fa-gift"></i></button>
+            <button class="crypto-btn"><i class="fas fa-bell"></i></button>
+            <button class="crypto-btn">Add Component <i class="fas fa-plus"></i></button>
+            <button class="crypto-btn" style="border-radius:20px;padding:4px 12px;"><i class="fas fa-user-circle" style="font-size:1.2rem;"></i> <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></button>
           </div>
         </div>
 
-        <div class="cb-top-cards">
+        <div class="crypto-grid-top">
           <!-- Card 1: Banking -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-university"></i> Banking</span>
-              <a href="#">More &gt;</a>
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title"><i class="fas fa-university" style="color:#3b82f6;margin-right:8px;"></i> Banking Sector</div>
+              <div class="crypto-card-action">Live <i class="fas fa-circle crypto-trend-up" style="font-size:0.5rem;margin-left:4px;vertical-align:middle;animation:pulse-dot 2s infinite;"></i></div>
             </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#2563eb;color:#fff;"><i class="fas fa-money-check-alt"></i></div>
-                <div class="cb-item-info">
-                  <h4>Core Banking DB</h4>
-                  <p>Added Jun 22</p>
+            <div class="crypto-exposure-value">
+              3.2M <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
+            </div>
+            <div class="crypto-list" style="margin-top:20px;">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#f97316;"><i class="fas fa-credit-card"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Credit Card Data</h4>
+                    <p>PCI-DSS Enforced</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">100% Secure</div>
                 </div>
               </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">84% Risk</div>
-                <div class="cb-item-trend cb-trend-up">↗ 23.94%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#eab308;color:#000;"><i class="fas fa-credit-card"></i></div>
-                <div class="cb-item-info">
-                  <h4>Card Processor</h4>
-                  <p>Added Jun 27</p>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#3b82f6;"><i class="fas fa-money-check-alt"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Account Details</h4>
+                    <p>Financial Assets</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">91% Risk</div>
-                <div class="cb-item-trend cb-trend-up">↗ 21.50%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#f97316;color:#fff;"><i class="fas fa-file-invoice-dollar"></i></div>
-                <div class="cb-item-info">
-                  <h4>Loan Origination</h4>
-                  <p>Added Jun 22</p>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val" style="color:#f59e0b;font-size:0.85rem;font-weight:500;margin-bottom:4px;">Warning</div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">76% Risk</div>
-                <div class="cb-item-trend cb-trend-up">↗ 21.96%</div>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Health care -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-heartbeat"></i> Health care</span>
-              <a href="#">More &gt;</a>
+          <!-- Card 2: Healthcare -->
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title"><i class="fas fa-notes-medical" style="color:#10b981;margin-right:8px;"></i> Healthcare Sector</div>
+              <i class="fas fa-shield-alt" style="color:#10b981;font-size:1rem;"></i>
             </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#ef4444;color:#fff;"><i class="fas fa-notes-medical"></i></div>
-                <div class="cb-item-info">
-                  <h4>EHR System</h4>
-                  <p>Discovered PII</p>
+            <div class="crypto-exposure-value">
+              845K <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
+            </div>
+            <div class="crypto-list" style="margin-top:20px;">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#ef4444;"><i class="fas fa-heartbeat"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>EHR Databases</h4>
+                    <p>High Sensitivity</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val down">-12% Risk</div>
                 </div>
               </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">9,420 Recs</div>
-                <div class="cb-item-trend cb-trend-up">↗ 14.40%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#8b5cf6;color:#fff;"><i class="fas fa-x-ray"></i></div>
-                <div class="cb-item-info">
-                  <h4>Imaging Arch</h4>
-                  <p>Discovered PII</p>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#8b5cf6;"><i class="fas fa-laptop-medical"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Wearable IoT</h4>
+                    <p>Streaming Data</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">1,205 Recs</div>
-                <div class="cb-item-trend cb-trend-up">↗ 18.54%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#06b6d4;color:#fff;"><i class="fas fa-pills"></i></div>
-                <div class="cb-item-info">
-                  <h4>Pharmacy DB</h4>
-                  <p>Discovered PII</p>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">Compliant</div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">3,110 Recs</div>
-                <div class="cb-item-trend cb-trend-up">↗ 60.05%</div>
               </div>
             </div>
           </div>
 
           <!-- Card 3: Education -->
-          <div class="cb-card">
-            <div class="cb-card-header">
-              <span><i class="fas fa-graduation-cap"></i> Education</span>
-              <a href="#">More &gt;</a>
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title"><i class="fas fa-graduation-cap" style="color:#f59e0b;margin-right:8px;"></i> Education Sector</div>
+              <div class="crypto-card-action">Audit <i class="fas fa-chevron-right" style="font-size:0.6rem;margin-left:4px;"></i></div>
             </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#10b981;color:#fff;"><i class="fas fa-user-graduate"></i></div>
-                <div class="cb-item-info">
-                  <h4>Student Info Sys</h4>
-                  <p>Sensitive Data</p>
+            <div class="crypto-exposure-value">
+              1.2M <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
+            </div>
+            <div class="crypto-list" style="margin-top:20px;">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#f59e0b;"><i class="fas fa-users"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Student Profiles</h4>
+                    <p>FERPA Enforced</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">100% Match</div>
                 </div>
               </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">High Risk</div>
-                <div class="cb-item-trend cb-trend-down">↘ 2.40%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#ec4899;color:#fff;"><i class="fas fa-chalkboard-teacher"></i></div>
-                <div class="cb-item-info">
-                  <h4>Faculty Portal</h4>
-                  <p>Sensitive Data</p>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#06b6d4;"><i class="fas fa-book-reader"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Alumni Records</h4>
+                    <p>Legacy Systems</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">Med Risk</div>
-                <div class="cb-item-trend cb-trend-up">↗ 5.12%</div>
-              </div>
-            </div>
-            <div class="cb-list-item">
-              <div class="cb-item-left">
-                <div class="cb-item-icon" style="background:#64748b;color:#fff;"><i class="fas fa-book"></i></div>
-                <div class="cb-item-info">
-                  <h4>Library Records</h4>
-                  <p>Sensitive Data</p>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val" style="color:#f59e0b;font-size:0.85rem;font-weight:500;margin-bottom:4px;">Warning</div>
                 </div>
-              </div>
-              <div class="cb-item-right">
-                <div class="cb-item-value">Low Risk</div>
-                <div class="cb-item-trend cb-trend-down">↘ 0.05%</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Main Data Table -->
-        <div class="cb-main-panel">
-          <div class="cb-panel-header">
-            <div class="cb-panel-title">
-              Data Sources <span class="cb-panel-subtitle">11,754 assets</span>
-            </div>
-            <div class="cb-filters">
-              <div class="cb-tabs">
-                <button class="cb-tab active"><i class="fas fa-globe"></i> All assets</button>
-                <button class="cb-tab">Banking</button>
-                <button class="cb-tab">Health</button>
-                <button class="cb-tab">Edu</button>
+        <div class="crypto-grid-bottom">
+          <!-- Widget 4: Total Inventory (GET /inventory) -->
+          <div class="crypto-card">
+            <div class="crypto-card-header" style="margin-bottom:12px;">
+              <div class="crypto-card-title">Enterprise Inventory Volume</div>
+              <div style="display:flex;gap:8px;">
+                <div class="crypto-card-action">Day</div>
+                <div class="crypto-card-action">Week</div>
+                <div class="crypto-card-action" style="background:#27272a;color:#fff;">Month</div>
               </div>
-              <div class="cb-filter-dropdown" style="margin-left:16px;">USD <i class="fas fa-chevron-down"></i></div>
-              <div class="cb-filter-dropdown">1 Day <i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="crypto-card-header" style="margin-bottom:0;">
+              <div class="crypto-assets-val">84,657.09 <span>PII Records</span> <span class="crypto-trend-up" style="font-size:0.85rem;margin-left:12px;">▲ +2.42%</span></div>
+              <div class="crypto-card-action">Area Chart <i class="fas fa-chevron-down"></i></div>
+            </div>
+
+            <div class="crypto-chart-large">
+              <div class="y-axis-labels">
+                <span>80k</span><span>60k</span><span>40k</span><span>0</span>
+              </div>
+              <svg class="crypto-chart-svg-large" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <!-- Grid Lines -->
+                <line x1="0" y1="10" x2="400" y2="10" class="chart-grid-line"></line>
+                <line x1="0" y1="55" x2="400" y2="55" class="chart-grid-line"></line>
+                <line x1="0" y1="100" x2="400" y2="100" class="chart-grid-line"></line>
+                <line x1="0" y1="145" x2="400" y2="145" class="chart-grid-line"></line>
+                
+                <!-- Chart Line -->
+                <path class="crypto-chart-line" d="M0,100 C 40,120 80,60 120,90 C 160,120 200,40 240,60 C 280,80 320,110 360,60 C 380,35 400,60 400,60"></path>
+              </svg>
+              <div class="chart-data-line" style="left:50%;"></div>
+              <div class="chart-data-point" style="left:50%; top:33.3%;"></div>
+              <div class="chart-tooltip" style="left:50%; top:30%;">Scan ID: #9,9120</div>
+              
+              <div class="crypto-chart-labels" style="margin-left:40px;">
+                <span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span>
+              </div>
             </div>
           </div>
 
-          <table class="cb-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>PII Count</th>
-                <th>Chart</th>
-                <th>Change</th>
-                <th>Risk Score</th>
-                <th>Sector</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#f59e0b;color:#fff;"><i class="fas fa-database"></i></div>
-                  <div class="cb-name-text">
-                    <strong>Core Banking DB</strong>
-                    <span>CDB</span>
-                  </div>
-                </td>
-                <td class="cb-col-stat">63,289.06</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="up" d="M0 24 L20 12 L40 16 L60 4 L80 0"></path></svg>
-                </td>
-                <td class="cb-trend-up">↗ 0.46%</td>
-                <td class="cb-col-stat"><span style="color:#ef4444;">94 High</span></td>
-                <td class="cb-col-stat">Banking</td>
-                <td><button class="cb-action-btn">View</button></td>
-              </tr>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#6366f1;color:#fff;"><i class="fas fa-notes-medical"></i></div>
-                  <div class="cb-name-text">
-                    <strong>EHR System</strong>
-                    <span>EHR</span>
-                  </div>
-                </td>
-                <td class="cb-col-stat">3,408.56</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="up" d="M0 20 L20 18 L40 10 L60 8 L80 4"></path></svg>
-                </td>
-                <td class="cb-trend-up">↗ 1.58%</td>
-                <td class="cb-col-stat"><span style="color:#ef4444;">91 High</span></td>
-                <td class="cb-col-stat">Health care</td>
-                <td><button class="cb-action-btn">View</button></td>
-              </tr>
-              <tr>
-                <td class="cb-col-name">
-                  <i class="far fa-star"></i>
-                  <div class="cb-icon-wrap" style="background:#10b981;color:#fff;"><i class="fas fa-user-graduate"></i></div>
-                  <div class="cb-name-text">
-                    <strong>Student Info Sys</strong>
-                    <span>SIS</span>
-                  </div>
-                </td>
-                <td class="cb-col-stat">1,024.10</td>
-                <td>
-                  <svg class="cb-sparkline"><path class="down" d="M0 4 L20 8 L40 6 L60 16 L80 20"></path></svg>
-                </td>
-                <td class="cb-trend-down">↘ 0.02%</td>
-                <td class="cb-col-stat"><span style="color:#f59e0b;">56 Med</span></td>
-                <td class="cb-col-stat">Education</td>
-                <td><button class="cb-action-btn">View</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- Widget 5: Dashboard CTA (GET /dashboard-stats) -->
+          <div class="crypto-card crypto-alert-card">
+            <div class="crypto-alert-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="crypto-alert-badge"><i class="fas fa-bolt"></i> API Connection Active</div>
+            <div class="crypto-alert-val">80<span>endpoints</span></div>
+            <p class="crypto-alert-desc">Track, tag, and secure enterprise data smarter, faster, easier.</p>
+            <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:0.75rem;color:#71717a;">GET /dashboard-stats</span>
+              <div class="crypto-card-action" style="padding:6px 12px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -296,6 +232,8 @@
     </div>
   </footer>
 
+  <script src="js/api.js"></script>
   <script src="js/dashboard.js"></script>
+  <script src="js/ui_core.js"></script>
 </body>
 </html>
