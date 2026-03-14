@@ -22,7 +22,6 @@
         <a href="lineage.html" class="active">Enterprises</a>
         <a href="reports.html">DPDPA Compliance</a>
         <a href="scan.html">Scanner</a>
-        <a href="reports.html">Report</a>
       </div>
       <div class="navbar-actions">
         <a href="scan.html" class="btn btn-primary btn-sm">Get Started <i class="fas fa-arrow-right"></i></a>
@@ -51,117 +50,115 @@
         </div>
 
         <div class="crypto-grid-top">
-          <!-- Widget 1: Risk Summary (GET /risk-summary) -->
+          <!-- Card 1: Banking -->
           <div class="crypto-card">
             <div class="crypto-card-header">
-              <div class="crypto-card-title">Risk Summary Exposure</div>
-              <i class="fas fa-external-link-alt" style="font-size:0.8rem;cursor:pointer;"></i>
+              <div class="crypto-card-title"><i class="fas fa-university" style="color:#3b82f6;margin-right:8px;"></i> Banking Sector</div>
+              <div class="crypto-card-action">Live <i class="fas fa-circle crypto-trend-up" style="font-size:0.5rem;margin-left:4px;vertical-align:middle;animation:pulse-dot 2s infinite;"></i></div>
             </div>
             <div class="crypto-exposure-value">
-              13.70% <span class="crypto-trend-up">▲ +2.42%</span>
+              3.2M <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
             </div>
-            <div class="crypto-chart-area">
-              <svg class="crypto-chart-svg" viewBox="0 0 200 60" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="orange-glow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#f97316" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#f97316" stop-opacity="0.0"/>
-                  </linearGradient>
-                </defs>
-                <path class="crypto-chart-path" d="M0,60 L0,40 C50,45 100,20 150,30 C180,35 200,10 200,10 L200,60 Z"></path>
-                <path class="crypto-chart-line" d="M0,40 C50,45 100,20 150,30 C180,35 200,10 200,10"></path>
-                <circle cx="150" cy="30" r="3" fill="#fff" stroke="#f97316" stroke-width="2"></circle>
-              </svg>
-            </div>
-            <div class="crypto-chart-labels">
-               <span>GET</span><span>/risk</span><span>-summary</span><span>API</span><span>Map</span>
-            </div>
-          </div>
-
-          <!-- Widget 2: Recent Scans (POST /scan-results) -->
-          <div class="crypto-card">
-            <div class="crypto-card-header">
-              <div class="crypto-card-title">Recent Scans (POST)</div>
-              <div class="crypto-card-action">Week <i class="fas fa-chevron-down"></i></div>
-            </div>
-            <div class="crypto-list">
+            <div class="crypto-list" style="margin-top:20px;">
               <div class="crypto-list-item">
                 <div class="crypto-item-left">
-                  <div class="crypto-item-icon" style="color:#3b82f6;"><i class="fas fa-database"></i></div>
+                  <div class="crypto-item-icon" style="color:#f97316;"><i class="fas fa-credit-card"></i></div>
                   <div class="crypto-item-info">
-                    <h4>Core Banking (DB)</h4>
-                    <p>Scan complete</p>
+                    <h4>Credit Card Data</h4>
+                    <p>PCI-DSS Enforced</p>
                   </div>
                 </div>
                 <div class="crypto-item-right">
-                  <div class="crypto-item-val up">+320 PII</div>
-                  <div class="crypto-item-sub">2:45 Pm</div>
+                  <div class="crypto-item-val up">100% Secure</div>
                 </div>
               </div>
               <div class="crypto-list-item">
                 <div class="crypto-item-left">
-                  <div class="crypto-item-icon" style="color:#8b5cf6;"><i class="fas fa-notes-medical"></i></div>
+                  <div class="crypto-item-icon" style="color:#3b82f6;"><i class="fas fa-money-check-alt"></i></div>
                   <div class="crypto-item-info">
-                    <h4>EHR System (API)</h4>
-                    <p>Scan complete</p>
+                    <h4>Account Details</h4>
+                    <p>Financial Assets</p>
                   </div>
                 </div>
                 <div class="crypto-item-right">
-                  <div class="crypto-item-val up">+140 PII</div>
-                  <div class="crypto-item-sub">2:45 Pm</div>
-                </div>
-              </div>
-              <div class="crypto-list-item">
-                <div class="crypto-item-left">
-                  <div class="crypto-item-icon" style="color:#10b981;"><i class="fas fa-server"></i></div>
-                  <div class="crypto-item-info">
-                    <h4>Salesforce (SaaS)</h4>
-                    <p>Scan incomplete</p>
-                  </div>
-                </div>
-                <div class="crypto-item-right">
-                  <div class="crypto-item-val down">-12 PII</div>
-                  <div class="crypto-item-sub">2:45 Pm</div>
+                  <div class="crypto-item-val" style="color:#f59e0b;font-size:0.85rem;font-weight:500;margin-bottom:4px;">Warning</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Widget 3: PII Types Control (GET /pii-types) -->
+          <!-- Card 2: Healthcare -->
           <div class="crypto-card">
             <div class="crypto-card-header">
-              <div class="crypto-card-title">Classification Center</div>
-              <i class="fas fa-expand-arrows-alt" style="font-size:0.8rem;cursor:pointer;"></i>
+              <div class="crypto-card-title"><i class="fas fa-notes-medical" style="color:#10b981;margin-right:8px;"></i> Healthcare Sector</div>
+              <i class="fas fa-shield-alt" style="color:#10b981;font-size:1rem;"></i>
             </div>
-            <div class="crypto-trade-tabs">
-              <div class="crypto-tab active">Map</div>
-              <div class="crypto-tab">Tag</div>
-              <div class="crypto-tab">Protect</div>
+            <div class="crypto-exposure-value">
+              845K <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
             </div>
-            <div class="crypto-input-group">
-              <div class="crypto-input-label">From Type (GET /pii-types)</div>
-              <div class="crypto-input-row">
-                <button class="crypto-select"><i class="fas fa-id-card" style="color:#60a5fa;margin-right:8px;"></i> SSN <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:8px;color:#71717a"></i></button>
-                <div class="crypto-input-val">512.80</div>
+            <div class="crypto-list" style="margin-top:20px;">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#ef4444;"><i class="fas fa-heartbeat"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>EHR Databases</h4>
+                    <p>High Sensitivity</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val down">-12% Risk</div>
+                </div>
               </div>
-              <div class="crypto-input-sub">
-                <span>3,284.00 Discovered</span>
-                <span>High Risk (+0.32%)</span>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#8b5cf6;"><i class="fas fa-laptop-medical"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Wearable IoT</h4>
+                    <p>Streaming Data</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">Compliant</div>
+                </div>
               </div>
-              <div class="crypto-swap-btn"><i class="fas fa-exchange-alt" style="transform:rotate(90deg);"></i></div>
             </div>
-            
-            <div class="crypto-input-group" style="margin-bottom:0;">
-              <div class="crypto-input-label">To Policy</div>
-              <div class="crypto-input-row">
-                <button class="crypto-select"><i class="fas fa-lock" style="color:#2dd4bf;margin-right:8px;"></i> ENCRYPT <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:8px;color:#71717a"></i></button>
+          </div>
+
+          <!-- Card 3: Education -->
+          <div class="crypto-card">
+            <div class="crypto-card-header">
+              <div class="crypto-card-title"><i class="fas fa-graduation-cap" style="color:#f59e0b;margin-right:8px;"></i> Education Sector</div>
+              <div class="crypto-card-action">Audit <i class="fas fa-chevron-right" style="font-size:0.6rem;margin-left:4px;"></i></div>
+            </div>
+            <div class="crypto-exposure-value">
+              1.2M <span style="font-size:0.9rem; color:#71717a; font-weight:400; margin-left:8px;">Records Scanned</span> 
+            </div>
+            <div class="crypto-list" style="margin-top:20px;">
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#f59e0b;"><i class="fas fa-users"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Student Profiles</h4>
+                    <p>FERPA Enforced</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val up">100% Match</div>
+                </div>
               </div>
-              <div class="crypto-input-sub">
-                <span>AES-256 Available</span>
-                <span>Active (+0.32%)</span>
+              <div class="crypto-list-item">
+                <div class="crypto-item-left">
+                  <div class="crypto-item-icon" style="color:#06b6d4;"><i class="fas fa-book-reader"></i></div>
+                  <div class="crypto-item-info">
+                    <h4>Alumni Records</h4>
+                    <p>Legacy Systems</p>
+                  </div>
+                </div>
+                <div class="crypto-item-right">
+                  <div class="crypto-item-val" style="color:#f59e0b;font-size:0.85rem;font-weight:500;margin-bottom:4px;">Warning</div>
+                </div>
               </div>
             </div>
-            <button class="crypto-submit-btn">Apply Policy <i class="fas fa-sync-alt" style="margin-left:4px;font-size:0.8rem;"></i></button>
           </div>
         </div>
 

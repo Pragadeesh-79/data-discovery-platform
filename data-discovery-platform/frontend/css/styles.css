@@ -3240,6 +3240,217 @@ section {
   border-color: #52525b;
 }
 
+/* ═══ SCANNER PAGE (DARK THEME) ═══ */
+.scanner-page {
+  padding: 60px 0;
+}
+
+.upload-zone {
+  background: #121214;
+  border: 2px dashed #3f3f46;
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.upload-zone:hover {
+  border-color: #f97316;
+  background: #18181b;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.1);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #f97316;
+  margin-bottom: 16px;
+}
+
+.file-types {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.file-type-badge {
+  background: #27272a;
+  color: #a1a1aa;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feature-card {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: #3f3f46;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-tag {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  color: #d4d4d8;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.scan-progress {
+  background: #121214;
+  border: 1px solid #27272a;
+  padding: 24px;
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+.progress-bar-container {
+  height: 8px;
+  background: #27272a;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.stat-card {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.stat-title {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+.detection-showcase {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detection-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detection-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detection-table th, .detection-table td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #27272a;
+}
+
+.detection-table th {
+  color: #a1a1aa;
+  font-weight: 500;
+  font-size: 0.85rem;
+  background: #18181b;
+}
+
+.detection-table tr:last-child td {
+  border-bottom: none;
+}
+
+.type-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.type-badge.identifier { background: rgba(249, 115, 22, 0.1); color: #f97316; }
+.type-badge.financial { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.type-badge.contact { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.type-badge.personal { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+
+.risk-indicator {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.risk-indicator.high { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+.risk-indicator.medium { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.risk-indicator.low { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+
+.ai-output-box {
+  background: #121214;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.code-block {
+  background: #09090b;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #e4e4e7;
+  overflow-x: auto;
+}
+
+.code-comment { color: #71717a; }
+.code-keyword { color: #f97316; }
+.code-string { color: #10b981; }
+.code-entity { color: #3b82f6; }
+
 /* Feature: Bottom Massive Chart */
 .crypto-assets-val {
   font-size: 2.2rem;
