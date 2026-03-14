@@ -2,7 +2,15 @@
 
 let piiChartInstance = null; // Store chart instance to destroy it before re-rendering
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
+    // Initial fetch
+    fetchAndUpdateDashboard();
+
+    // Set up real-time polling every 5 seconds
+    setInterval(fetchAndUpdateDashboard, 5000);
+});
+
+async function fetchAndUpdateDashboard() {
     // 1. Fetch data from backend API
     const data = await getDashboardStats();
 
@@ -12,24 +20,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // 2. Safely Update UI Elements
-    const totalRecordsEl = document.getElementById("totalRecords");
-    const riskScoreEl = document.getElementById("riskScore");
+    const filesScannedEl = document.getElementById("filesScannedVal");
+    const piiDetectedEl = document.getElementById("piiDetectedVal");
+    const highRiskEl = document.getElementById("highRiskVal");
     const complianceStatusEl = document.getElementById("complianceStatus");
 
-    if (totalRecordsEl) totalRecordsEl.innerText = data.total_records;
-    if (riskScoreEl) riskScoreEl.innerText = data.total_risk_score;
-    if (complianceStatusEl) complianceStatusEl.innerText = data.compliance_status;
+    if (filesScannedEl) filesScannedEl.innerText = data.files_scanned !== undefined ? data.files_scanned : 0;
+    if (piiDetectedEl) piiDetectedEl.innerText = data.pii_detected !== undefined ? data.pii_detected : 0;
+    if (highRiskEl) highRiskEl.innerText = data.high_risk !== undefined ? data.high_risk : 0;
 
-    // Apply color logic based on status
-    if (complianceStatusEl && data.compliance_status === "Review Required") {
-        complianceStatusEl.style.color = "#ff4d4d"; // Red alert
-    } else if (complianceStatusEl) {
-        complianceStatusEl.style.color = "#4ade80"; // Green safe
+    if (complianceStatusEl && data.compliance_status) {
+        complianceStatusEl.innerText = data.compliance_status;
+        // Apply color logic based on status
+        if (data.compliance_status === "Review Required") {
+            complianceStatusEl.style.color = "#ff4d4d"; // Red alert
+        } else {
+            complianceStatusEl.style.color = "#4ade80"; // Green safe
+        }
     }
 
     // 3. Render PII Distribution Chart
-    renderPIIChart(data.pii_types);
-});
+    if (data.pii_types && Object.keys(data.pii_types).length > 0) {
+        renderPIIChart(data.pii_types);
+    }
+}
 
 /**
  * Initializes and dynamically handles Chart.js graphing 
