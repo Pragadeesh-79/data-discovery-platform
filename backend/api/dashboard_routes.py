@@ -8,7 +8,7 @@ router = APIRouter()
 
 @router.get("/dashboard-stats")
 def get_dashboard_stats(db: Session = Depends(get_db)):
-    # Number of unique files scanned
+    # Number of unique file locations scanned
     unique_files = db.query(func.count(func.distinct(PIIRecord.location))).scalar() or 0
 
     # Total PII records detected
