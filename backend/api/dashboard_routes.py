@@ -1,19 +1,24 @@
-from fastapi import APIRouter
-from database.mongo_client import pii_inventory
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from sqlalchemy import func
+from database.sqlite_db import get_db
+from models.pii_model import PIIRecord
 
 router = APIRouter()
 
 @router.get("/dashboard-stats")
-def get_dashboard_stats():
-    # Number of unique files
-    unique_files = len(pii_inventory.distinct("file_name"))
-    
+def get_dashboard_stats(db: Session = Depends(get_db)):
+    # Number of unique file locations scanned
+    unique_files = db.query(func.count(func.distinct(PIIRecord.location))).scalar() or 0
+
     # Total PII records detected
-    total_pii = pii_inventory.count_documents({})
-    
+    total_pii = db.query(PIIRecord).count()
+
     # Total High Risk records
-    high_risk_count = pii_inventory.count_documents({"classification": {"$in": ["Highly Sensitive", "Strict", "High"]}})
-    
+    high_risk_count = db.query(PIIRecord).filter(
+        PIIRecord.sensitivity.in_(["High"])
+    ).count()
+
     return {
         "files_scanned": unique_files,
         "pii_detected": total_pii,
